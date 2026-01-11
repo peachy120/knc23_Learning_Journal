@@ -1,0 +1,448 @@
+/*---------------------------
+Base styles for all screen widths
+----------------------------*/
+* {box-sizing: border-box;}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #dae0ef;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	color: #00172c;
+	font-size: 100%;/*16px=1em*/
+	line-height: 1.2;
+}
+
+#wrapper
+{
+	max-width: 70em;
+	margin: 0 auto;
+	border-radius: 8px;
+}
+
+#wrappers
+{
+	max-width: 70em;
+	margin: 0 auto;
+	border-radius: 8px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	line-height: 1;
+}
+
+h1 { font-size: 2.25em; } /* 36px */
+h2 { font-size: 1.75em; } /* 28px */
+h3 { font-size: 1.375em; } /* 22px */
+h4 { font-size: 1.125em; } /* 18px */
+h5 { font-size: 1em; } /* 16px */
+h6 { font-size: .875em; } /* 14px */
+
+p
+{
+	line-height: 1.5;
+}
+
+small	{
+	font-size: .75em; /* 12px*/
+}
+
+blockquote
+{
+	padding: 1em 2em 1em 2em;
+	margin: 0 0 2em 0;
+	border-left: 5px solid #eee;
+}
+
+table
+{
+	margin-right: 3em;
+	border-spacing: 0;
+	border-collapse: collapse;
+	background-color: #fff;
+	border: 2px solid #00175c;
+	max-width: 35em;
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+tbody tr:nth-child(odd) {
+	background-color: #dcecff;
+}
+
+th, td
+{
+	font-size: 90%;
+	padding: .2em 1em .2em 1em;
+	border: 1px solid #00175c;
+	vertical-align: top;
+	text-align: center;
+	white-space: nowrap;
+}
+
+td:empty {
+	background-image: url(images/td_pattern.png);
+	background-repeat: repeat;
+}
+
+caption	{
+	font-size: 1.2em;
+	font-weight: bold;
+	margin: 1.2em 0 .5em 0;
+	text-transform: uppercase;
+}
+
+a	{ text-decoration: none; }
+	
+a:link { color: #C00; }
+a:visited { color: #990000; }
+a:hover { 
+	color: #3300FF;
+	text-decoration:underline;
+}
+a:active { color: #336; }
+a:focus { color: #336; }
+
+a[href^="#top"] {
+	font-size: .75em;
+	background: url(../learningJournal/images/up.png) no-repeat left bottom;
+	padding-left: 1.4em;
+}
+
+footer a:link { color: #fff; }
+
+code {
+	font-family: monospace;
+	background-color: #f9f9f9;
+	padding: 2px 4px;
+	border-radius: 3px;
+	font-size: 0.9rem;
+}
+/* -----------------------
+Grid layout
+------------------------*/
+
+.banner {
+	grid-area: banner;
+}
+
+.menu {
+	grid-area: menu;
+}
+
+nav {
+	grid-area: nav;
+}
+
+table {
+	grid-area: table;
+}
+
+main {
+	grid-area: main;
+}
+
+aside {
+	grid-area: aside;
+}
+
+footer {
+	grid-area: footer;
+}
+
+#wrapper {
+	display: grid;
+	grid-gap: 0;
+	grid-template-areas:
+		"banner"
+		"menu"
+		"nav"
+		"table"
+		"main"
+		"aside"
+		"footer";
+}
+
+@media (min-width: 50em) {
+  #wrapper {
+    grid-template-columns: 3fr 6fr;
+    grid-template-areas: 
+      "banner  banner"
+      "menu  menu"
+	  "nav  table"
+      "aside  main"
+      "footer  footer";
+  }
+}
+
+@media (min-width: 60em) {
+  #wrapper {
+    grid-template-columns: 3fr 5fr 3fr;
+    grid-template-areas: 
+      "banner  banner  banner"
+      "menu  menu  menu"
+	  "nav  table  aside"
+      "nav  main  aside"
+      "footer  footer  footer";
+   }
+}
+
+#wrappers {
+	display: grid;
+	grid-gap: 0;
+	grid-template-areas:
+		"banner"
+		"menu"
+		"nav"
+		"main"
+		"aside"
+		"footer";
+}
+
+@media (min-width: 50em) {
+  #wrappers {
+    grid-template-columns: 3fr 9fr;
+    grid-template-areas: 
+      "banner  banner"
+      "menu  menu"
+	  "nav  main"
+      "aside  main"
+      "footer  footer";
+  }
+}
+
+@media (max-width: 35em) {
+    table {
+     display:none;
+    }
+}
+.menu ul
+{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.menu li
+{
+  display: block; /*display in a vertical column*/
+  margin: 0;
+}
+.menu a
+{
+  display: block;
+  padding: .7em 1.25em .7em 1.25em;
+  color: #001639;
+  text-decoration: none;
+  border-bottom: 1px solid #001639;
+}
+.menu a:link { color: #00175c; }
+.menu a:visited { color: #DFDFDF; }
+.menu a:focus { color: #C00; }
+.menu a:hover { color: #DFDFDF; }
+.menu a:active { color: #C00; }
+
+.media  {
+    margin: 0;
+    padding: 0;
+}
+.media li   {
+    margin: 0;
+    padding: 0;
+}
+
+
+.notes-contents {
+	background: #dae0ef;
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+}
+
+.notes {
+	background: #dae0ef;
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+	padding: 1em;
+}
+
+pre {
+	background-color: #f9f9f9;
+	border: 1px solid #ddd;
+	padding: 1rem;
+	border-radius: 5px;
+	overflow-x: auto;
+	font-size: 0.9rem;
+	white-space: pre-wrap;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+}
+.card {
+    display: flex;
+}
+.card-content {
+    flex-direction: column;
+    border: 1px solid #00172c;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+	border-radius: 8px;
+    margin: 1.25em 1.25em 0.3em 0;
+    padding: 1em;
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+}
+  
+/*640 px - tablet portrait orientation - 2 columns*/
+@media screen and (min-width: 40em){
+article { 
+    column-count: 1;
+    column-width: 20em;
+    column-gap:1.5em;
+    padding: 1em 2em 1em 0; 
+}
+/*Makes the heading span both columns*/ 
+article h2  {
+    color: #900;
+    column-span: all; /*col-span property is not supported by FireFox Grrrr*/
+}   
+.card { width: 50%; }
+}
+/*960 px* - tablet landscape orientation and above - 3 columns*/
+@media screen and (min-width: 60em) {
+.card { width: 50%; }
+}
+
+
+/* --------------------------
+Layout Styles - mobile first
+----------------------------*/
+.banner
+{
+	color: #00172c;
+	background: #dae0ef;
+	text-align: center;
+	border-radius: 8px;
+	padding: 1em 0 1em 1.25em;
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu
+{
+	background: #dae0ef ;
+	padding: 0;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: bold;
+	border-radius: 8px;
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav h3, aside h3 {
+	margin-left: .6em;
+}
+
+main
+{
+	padding: 2rem;
+    margin: 0 1em 0 1em;
+    background-color: white;
+    border-radius: 8px;
+	width: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	
+}
+
+footer
+{
+	color: #00172c;
+	background: #dae0ef;
+	padding: 1em 1.25em 1em 1.25em;
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+}
+
+/**Makes images 100% width of containing element i.e. flexible
+*Remove image width and height attributes from html!
+*/
+img	
+{
+	max-width: 100%;
+}
+
+/* -----------------------------------------------
+Menu Navigation - vertical layout for smaller screens
+--------------------------------------------------*/
+.menu ul
+{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.menu li
+{
+	display: block; /*display in a vertical column*/
+	margin: 0;
+}
+.menu a
+{
+	display: block;
+	padding: .7em 1.25em .7em 1.25em;
+	color: #00172c;
+	text-decoration: none;
+	border-bottom: 1px solid gray;
+}
+.menu a:link { color: #00172c; }
+.menu a:visited { color: #00172c; }
+.menu a:focus { color: #C00; }
+.menu a:hover { color: #00172c; }
+.menu a:active { color: #C00; }
+
+/* ----------------------------------------------------
+Wider screens - i.e. desktop, laptop, tablet landscape
+-------------------------------------------------------*/
+
+@media (min-width: 50em)
+{
+	.banner { padding: 0 0 0 3em; }
+	
+/* Menu navigation - inline layout for wider screens */	
+	
+	.menu { padding: 1em 0 1em 3em; }
+
+	.menu li
+	{
+		display: inline;
+		margin: 0 1em 0 0;
+	}
+	.menu a
+	{
+		display: inline;
+		padding: 0;
+		border-bottom: 0;
+	}
+}
+
+/* ----------------------------------------------------
+Mobile screens - portrait
+-------------------------------------------------------*/
+/*Timtable not displayed on small width screens*/
+
+@media (max-width: 35em) {
+	table {
+		display:none;
+   }
+}
+
+/*float/clear classes */
+.fltrt {  /* this class can be used to float an element e.g. image right in the page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: .5em;
+}
+.fltlt { /* this class can be used to float an element e.g. image left in the page. The floated element must precede the element it should be next to on the page. */
+	float: left;
+	margin-right: .5em;
+}
+.clear { /* this class can be placed on an element or empty div as the final element following the last floated div */
+	clear: both;
+}

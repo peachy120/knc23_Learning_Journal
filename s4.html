@@ -1,0 +1,140 @@
+
+
+<!doctype html>
+<!--HTML5 doctype declaration -->
+<html lang="en">
+<!--default language of the document content -->
+
+<head>
+    <meta charset="utf-8"><!--character encoding for the document (Unicode) -->
+    <title>Kary's Learning Journal</title><!--web page title -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/stylesheet.css" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Strait" rel="stylesheet">
+    <script src="script/s4.js"></script>
+</head>
+
+<body>
+    <a id="top"></a>
+    <!--Markup all web page content inside the 'body' tags -->
+    <div id="wrappers">
+        <!--The 'wrapper' contains all the page content-->
+
+        <header class="banner">
+            <!--The main heading for the page -->
+            <h1>Java Script Lab Session 4</h1>
+            <h2>Working with Strings</h2>
+        </header>
+
+        <nav class="menu">
+            <!--The primary navigation for the page -->
+            <ul>
+                <li><a href="index.html">Learning Journal</a></li>
+                <li><a href="tutorial.html">Tutorial</a></li>
+                <li><a href="lectureNotes.html">Lecture Notes</a></li>
+                <li><a href="jscriptlabs.html">Lab work</a></li>
+                <li><a href="contact.html">Contact me</a></li>
+                <li><a href="question.html">Possible Questions</a></li>
+                <li><a href="definition.html">Definition</a></li>
+            </ul>
+        </nav>
+
+        <nav>
+            <p>Lab Excerise</p>
+            <ol>
+                <li>Questions</li>
+                <li><a href="s2.html">Statement, Variables, Data Type</a></li>
+                <li><a href="s3.html">Control Structures</a></li>
+                <li><a href="s4.html">Working with Strings</a></li>
+                <li><a href="s5.html">Working with Arrays</a></li>
+                <li><a href="s6.html">Functions</a></li>
+                <li><a href="s7.html">DOM 1 - Introduce, Accessing Elements and Attributes</a></li>
+                <li><a href="s8.html">DOM 2 - Events, Listeners, Manipulating Elements</a></li>
+                <li><a href="s9.html">DOM 3 - Creating and Deleting Elements</a></li>
+                <li><a href="s10.html">Working with Forms</a></li>
+            </ol>
+        </nav>
+
+        <main>
+            <article>
+                <div class="notes-contents">
+                    <header class="notes">
+                        <h3>Session 4 Tutorial Questions</h3>
+                        <p>2. Declare a variable str and assign it the following piece of text: I'm learning JavaScript in my web development module.</p>
+                        <p>HINT: Remember to escape any special characters</p>
+                        <p><strong>Answers :</strong></p>
+                        <pre><code>let str = "I'm learning JavaScript in my web development module";</code></pre>
+                        <hr>
+                        <p>3. Log the number of characters in string str to the console.</p>
+                        <p><strong>Answers :</strong></p>
+                        <pre><code>console.log("Number of characters : ", str.length);</code></pre>
+                        <hr>
+                        <p>4. Find the position of the string "JavaScript" in string str and log it to the console.</p>
+                        <p><strong>Answers :</strong></p>
+                        <pre><code>console.log("The position of 'JavaScript' : ", str.charAt("JavaScript"));</code></pre>
+                        <hr>
+                        <p>5. Count the number of times the letter "e" appears in the string str.</p>
+                        <p>HINT: Using a for loop and the String.charAt() method.</p>
+                        <p><strong>Answers :</strong></p>
+                        <pre><code>countE = 0;
+for (let i = 0; i < length; i++) {
+    if (str.charAt(i) === 'e') {
+        countE++;
+    }
+}
+console.log("The number of 'e' : ", countE);</code></pre>
+                        <hr>
+                        <p>6. Find the position of all letters "m" in string str and log them to the console</p>
+                        <p>HINT: The String.indexOf() takes an optional second parameter.</p>
+                        <p><strong>Answers :</strong></p>
+                        <pre><code>let indexM = str.indexOf("m")
+while (indexM !== -1) {
+    console.log("The position of 'm' : ", indexM);
+    indexM = str.indexOf("m", indexM + 1);
+}</code></pre>
+                        <hr>
+                        <p>Reverse string str and print it to the console. The result should be: .eludom tnempoleved bew ym ni tpircSavaJ gninrael m'I</p>
+                        <p>HINT: Use a second string variable, a decrementing for loop, string concatenation and the String.charAt() method.</p>
+                        <p><strong>Answers :</strong></p>
+                        <pre><code>let reversedStr = "";
+for (let i = str.length - 1; i >= 0; i--) {
+    reversedStr += str.charAt(i);
+}
+console.log("Reversed String : ", reversedStr);</code></pre>
+                        <hr>
+                        <p>8. Declare a variable url and assign it the current web address. Test if the page was called up from a web server (http:), a secure web server (https:), the file system (file:) or any other source and print the result to the console.</p>
+                        <p>HINT: 1) Use the if / else if / else construct and the String.startsWith() method</p>
+                        <p>HINT: 2) Use the following statement to get the current web address: var url = window.location.href;</p>
+                        <p><strong>Answers :</strong></p>
+                        <pre><code>var url = window.location.href;
+if (url.startsWith("https:")) {
+    console.log("Loaded from a web server https:");
+} else if (url.startsWith("http:")) {
+    console.log("Loaded from a web server https:");
+} else if (url.startsWith("file:")) {
+    console.log("Loaded from a file system file:");
+} else {
+    console.log("Not a valid email");
+}
+</code></pre>
+                        <a href="#top">Go to top</a>
+                    </header>
+                </div>
+            </article>
+        </main><!--Close main page content -->
+
+        <aside>
+        </aside>
+
+
+        <footer>
+            <!--Footer content -->
+            <p><a href="#top">Go to top</a></p>
+            <p><a href="K.Ching1@uni.brighton.ac.uk">Email Website design and developer: Kary Ching</a></p>
+            <small>&copy; 2025, Kary C.</small>
+        </footer>
+
+    </div><!--Close 'wrapper' div -->
+</body><!--Close 'body' -->
+</html><!--Close 'html' -->

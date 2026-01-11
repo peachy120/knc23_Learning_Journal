@@ -1,0 +1,173 @@
+
+
+<!doctype html>
+<!--HTML5 doctype declaration -->
+<html lang="en">
+<!--default language of the document content -->
+
+<head>
+    <meta charset="utf-8"><!--character encoding for the document (Unicode) -->
+    <title>Kary's Learning Journal</title><!--web page title -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/stylesheet.css" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Strait" rel="stylesheet">
+    <script src="script/s3.js"></script>
+</head>
+
+<body>
+    <a id="top"></a>
+    <!--Markup all web page content inside the 'body' tags -->
+    <div id="wrappers">
+        <!--The 'wrapper' contains all the page content-->
+
+        <header class="banner">
+            <!--The main heading for the page -->
+            <h1>Java Script Lab Session 3</h1>
+            <h2>Control Structures</h2>
+        </header>
+
+        <nav class="menu">
+            <!--The primary navigation for the page -->
+            <ul>
+                <li><a href="index.html">Learning Journal</a></li>
+                <li><a href="tutorial.html">Tutorial</a></li>
+                <li><a href="lectureNotes.html">Lecture Notes</a></li>
+                <li><a href="jscriptlabs.html">Lab work</a></li>
+                <li><a href="contact.html">Contact me</a></li>
+                <li><a href="question.html">Possible Questions</a></li>
+                <li><a href="definition.html">Definition</a></li>
+            </ul>
+        </nav>
+
+        <nav>
+            <p>Lab Excerise</p>
+            <ol>
+                <li>Questions</li>
+                <li><a href="s2.html">Statement, Variables, Data Type</a></li>
+                <li><a href="s3.html">Control Structures</a></li>
+                <li><a href="s4.html">Working with Strings</a></li>
+                <li><a href="s5.html">Working with Arrays</a></li>
+                <li><a href="s6.html">Functions</a></li>
+                <li><a href="s7.html">DOM 1 - Introduce, Accessing Elements and Attributes</a></li>
+                <li><a href="s8.html">DOM 2 - Events, Listeners, Manipulating Elements</a></li>
+                <li><a href="s9.html">DOM 3 - Creating and Deleting Elements</a></li>
+                <li><a href="s10.html">Working with Forms</a></li>
+            </ol>
+        </nav>
+
+        <main>
+            <article>
+                <div class="notes-contents">
+                    <header class="notes">
+                        <h3>Session 3 Tutorial Questions</h3>
+                        <p>2. Print to the console first the expression (1 == true) and then the expression (1 === true).</p>
+                        <p>Note the difference between using the simple and strict comparison operators == and ===.</p>
+                        <p><strong>Answer :</strong></p>
+                        <pre><code>console.log("(1 == true):", 1 == true);</code></pre>
+                        <pre><code>console.log("(1 === true):", 1 === true);</code></pre>
+                        <hr>
+                        <p>3. Define two variables x and y and initialise them to 3 and 5.</p>
+                        <p><strong>Answer :</strong></p>
+                        <pre><code>let x = 3;</code></pre>
+                        <pre><code>let y = 5;</code></pre>
+                        <p>a. Print to the console the following expressions:</p>
+                        <p>i. x less or equal to y</p>
+                        <p><strong>Answer :</strong></p>
+                        <pre><code>console.log("x <= y:", x <= y);</code></pre>
+                        <p>ii. x greater than 4 and y greater than 4</p>
+                        <p><strong>Answer :</strong></p>
+                        <pre><code>console.log("x > 4 && y > 4:", x > 4 && y > 4);</code></pre>
+                        <p>iii. x greater than 4 or y greater than 4</p>
+                        <p><strong>Answer :</strong></p>
+                        <pre><code>console.log("x > 4 || y > 4:", x > 4 || y > 4);</code></pre>
+                        <p>iv. not (x greater than 4 or y greater than 4)</p>
+                        <p><strong>Answer :</strong></p>
+                        <pre><code>console.log("!(x > 4 || y > 4):", !(x > 4 || y > 4));</code></pre>
+                        <p>v. x not equal y and y greater than 0</p>
+                        <p><strong>Answer :</strong></p>
+                        <pre><code>console.log("x !== y && y > 0:", x !== y && y > 0);</code></pre>
+                        <p>vi. x times y less than 15</p>
+                        <p><strong>Answer :</strong></p>
+                        <pre><code>console.log("x * y < 15:", x * y < 15);</code></pre>
+                        <p>vii. x times y equal or less than 15</p>
+                        <p><strong>Answer :</strong></p>
+                        <pre><code>console.log("x * y <= 15:", x * y <= 15);</code></pre>
+                        <p>b. Use an if statement that tests whether x is greater than y and then prints either "x is greater than y" or "x is less than or equal to y" to the console.</p>
+                        <p><strong>Answer :</strong></p>
+                        <pre><code>if ( x > y ) {
+    console.log("x is greater than y")
+} else {
+    console.log("x is less than or equal to y")
+}</code></pre>
+                        <p></p>
+                        <p>c. Log the result of dividing x by y only if x is greater than y</p>
+                        <p><strong>Answer :</strong></p>
+                        <pre><code>if ( x > y) {
+    let result = x / y;
+    console.log(result)
+}</code></pre>
+                        <p></p>
+                        <p>d. Add x to y while y is less than 100, then log the value of y to the console</p>
+                        <p>HINT: use a while loop</p>
+                        <p><strong>Answer :</strong></p>
+                        <pre><code>while ( y < 100) {
+    y = y + x;
+}</code></pre>
+                        <hr>
+                        <p>4. Log the string "Hello <number>" to the console y times (i.e. Hello 1, Hello 2, Hello 3 ....)</p>
+                        <p>HINT: use a for loop</p>
+                        <p><strong>Answer :</strong></p>
+                        <pre><code>for ( let counter = 0 ; counter < y ; counter++ ) {
+    console.log("Hello" + counter);
+}</code></pre>
+                        <hr>
+                        <p>5.Define a variable day and initialise it to a random number between 0 and 6. Then use a switch statement to test the value of day and print a corresponding day of the week to the console. (0=Monday, 1=Tuesday, ..., 6=Sunday)</p>
+                        <p>Hint: use the following expression to generate a random number between 0 and 6: <code>var day = Math.floor(Math.random() * 7);</code></p>
+                        <p><strong>Answer :</strong></p>
+                        <pre><code>var day = Math.floor( Math.random() * 7 );
+switch(day) {
+    case 0:
+        console.log("Monday");
+        break;
+    case 1:
+        console.log("Tuesday");
+        break;
+    case 2:
+        console.log("Wednesday");
+        break;
+    case 3:
+        console.log("Thursday");
+        break;
+    case 4:
+        console.log("Friday");
+        break;
+    case 5:
+        console.log("Saturday");
+        break;
+    case 6:
+        console.log("Sunday");
+        break;
+    default:
+        console.log("Invalid Day")
+}</code></pre>
+                        <a href="#top">Go to top</a>
+                    </header>
+                </div>
+            </article>
+        </main><!--Close main page content -->
+
+        <aside>
+        </aside>
+
+
+        <footer>
+            <!--Footer content -->
+            <p><a href="#top">Go to top</a></p>
+            <p><a href="K.Ching1@uni.brighton.ac.uk">Email Website design and developer: Kary Ching</a></p>
+            <small>&copy; 2025, Kary C.</small>
+        </footer>
+
+    </div><!--Close 'wrapper' div -->
+</body><!--Close 'body' -->
+</html><!--Close 'html' -->

@@ -1,0 +1,230 @@
+
+<!doctype html>
+<!--HTML5 doctype declaration -->
+<html lang="en">
+<!--default language of the document content -->
+
+<head>
+    <meta charset="utf-8"><!--character encoding for the document (Unicode) -->
+    <title>Kary's Learning Journal</title><!--web page title -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/stylesheet.css" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Strait" rel="stylesheet">
+    <script src="script/s10.js"></script>
+</head>
+
+<body>
+    <!--Markup all web page content inside the 'body' tags -->
+    <div id="wrappers">
+        <!--The 'wrappers' contains all the page content-->
+
+        <header class="banner">
+            <!--The main heading for the page -->
+            <h1>Java Script Lab Session 10</h1>
+            <h2>Working with Forms</h2>
+        </header>
+
+        <nav class="menu"><!--The primary navigation for the page -->
+            <ul>
+                <li><a href="index.html">Learning Journal</a></li>
+                <li><a href="tutorial.html">Tutorial</a></li>
+                <li><a href="lectureNotes.html">Lecture Notes</a></li>
+                <li><a href="jscriptlabs.html">Lab work</a></li>
+                <li><a href="contact.html">Contact me</a></li>
+                <li><a href="question.html">Possible Questions</a></li>
+                <li><a href="definition.html">Definition</a></li>
+            </ul>
+        </nav>
+
+        <nav>
+            <p>Lab Excerise</p>
+            <ol>
+                <li>Questions</li>
+                <li><a href="s2.html">Statement, Variables, Data Type</a></li>
+                <li><a href="s3.html">Control Structures</a></li>
+                <li><a href="s4.html">Working with Strings</a></li>
+                <li><a href="s5.html">Working with Arrays</a></li>
+                <li><a href="s6.html">Functions</a></li>
+                <li><a href="s7.html">DOM 1 - Introduce, Accessing Elements and Attributes</a></li>
+                <li><a href="s8.html">DOM 2 - Events, Listeners, Manipulating Elements</a></li>
+                <li><a href="s9.html">DOM 3 - Creating and Deleting Elements</a></li>
+                <li><a href="s10.html">Working with Forms</a></li>
+            </ol>
+        </nav>
+
+        <main>
+            <div id="form">
+                <form id="form1">
+                    <fieldset>
+                        <legend>Question 2</legend>
+                        <label for="fahrenheit">Fahrenheit:</label>
+                        <input type="text" id="fahrenheit">
+                    </fieldset>
+                </form>
+                <p id="celsius"></p>
+
+                <form id="form3">
+                    <fieldset>
+                        <legend>Question 3</legend>
+                        <input type="email" id="input3" placeholder="Your University email">
+                        <button type="submit">Validate</button>
+                    </fieldset>
+                </form>
+                <div id="div3"></div>
+
+                <form id="form4">
+                    <fieldset>
+                        <legend>Question 4</legend>
+                        <input type="text" id="input4" placeholder="Enter item">
+                        <button type="button" id="btn4add">Add</button>
+                        <button type="button" id="btn4clear">Clear</button>
+                    </fieldset>
+                </form>
+                <ul id="ul4"></ul>
+                
+                <form id="form5">
+                    <fieldset>
+                        <legend>Question 5</legend>
+                        <fieldset>
+                            <legend>Choose your food:</legend>
+                            <label><input type="checkbox" name="food" value="Donut"> Donut</label>
+                            <label><input type="checkbox" name="food" value="Bagel"> Bagel</label>
+                            <label><input type="checkbox" name="food" value="Burger"> Burger</label>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Choose your pet:</legend>
+                            <label><input type="radio" name="pet" value="Dog"> Dog</label>
+                            <label><input type="radio" name="pet" value="Cat"> Cat</label>
+                            <label><input type="radio" name="pet" value="Fish"> Fish</label>
+                        </fieldset>
+
+                        <label for="fruitSelect">Select your fruit:</label>
+                        <select id="fruitSelect">
+                            <option value="Apple">Apple</option>
+                            <option value="Banana">Banana</option>
+                            <option value="Orange">Orange</option>
+                        </select>
+
+                        <br><br>
+                        <label for="feedback">Feedback:</label><br>
+                        <textarea id="feedback" rows="4" cols="50" placeholder="Your feedback here..."></textarea>
+
+                        <br><br>
+                        <button type="submit">Submit</button>
+                </form>
+            </div>
+
+            <article>
+                <div class="notes-contents">
+                    <header class="notes">
+                        <h3>Session 10 Tutorial Questions</h3>
+                        <P>2. Create a form with a text input field with the id fahrenheit, and a paragraph element with the id celsius. Attach a keyup listener to the input field fahrenheit that reads its current value, converts it to degree Celsius and updates the paragraph with id celsius accordingly.</P>
+                        <p><strong>Answers : </strong></p>
+                        <pre><code>const fahrenheitInput = document.querySelector("#fahrenheit");
+    const celsiusOutput = document.querySelector("#celsius");
+
+    fahrenheitInput.addEventListener("keyup", function () {
+        const f = parseFloat(fahrenheitInput.value);
+        if (!isNaN(f)) {
+            const c = ((f - 32) * 5 / 9).toFixed(2);
+            celsiusOutput.textContent = `${c} °C`;
+        } else {
+            celsiusOutput.textContent = "";
+        }
+    });</code></pre>
+                        <hr>
+                        <p>3. Create a form with the id form3 containing an email input field with the id input3 and a submit button, and a target div element with the id div3. Attach an event listener to the form that intercepts the submit event, retrieves the value in the email field, validates it as a University of Brighton email address, and displays any issues in the div element. Valid University of Brighton email addresses must be at least 20 characters long and end with "@brighton.ac.uk" or "@uni.brighton.ac.uk".</p>
+                        <p>If the entered data is invalid then an error message should be displayed in a div explaining the problem and the text field’s background should turn red. If the number is valid then any previous error message should be cleared and the text field’s background should turn green.</p>
+                        <p><strong>Answers : </strong></p>
+                        <pre><code>const form3 = document.querySelector("#form3");
+    const input3 = document.querySelector("#input3");
+    const div3 = document.querySelector("#div3");
+
+    form3.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const email = input3.value.trim();
+        const isValid = (
+            email.length >= 20 &&
+            (email.endsWith("@brighton.ac.uk") || email.endsWith("@uni.brighton.ac.uk"))
+        );
+
+        if (!isValid) {
+            div3.textContent = "Invalid email. Must be at least 20 characters and end with '@brighton.ac.uk' or '@uni.brighton.ac.uk'.";
+            input3.style.backgroundColor = "red";
+        } else {
+            div3.textContent = "";
+            input3.style.backgroundColor = "lightgreen";
+        }
+    });</code></pre>
+                        <hr>
+                        <p>4. Create a form with the id form4 containing a text input field with the id input4 and two buttons with the id btn4add, and btn4clear. Also create an empty unordered list <code>ul</code> with the id ul4 just below the form. Add a click listener to btn4add that retrieves the value in the text field and adds it as a new list item to the unordered list ul4. Add a click listener to btn4clear that removes all list items from the unordered list ul4.</p>
+                        <p><strong>Answers : </strong></p>
+                        <pre><code>const btnAdd = document.querySelector("#btn4add");
+    const btnClear = document.querySelector("#btn4clear");
+    const input4 = document.querySelector("#input4");
+    const ul4 = document.querySelector("#ul4");
+
+    btnAdd.addEventListener("click", function () {
+        const value = input4.value.trim();
+        if (value !== "") {
+            const li = document.createElement("li");
+            li.textContent = value;
+            ul4.appendChild(li);
+            input4.value = "";
+        }
+    });
+
+    btnClear.addEventListener("click", function () {
+        ul4.innerHTML = "";
+    });</code></pre>
+                        <hr>
+                        <p>5. Create a form with the id form5 containing various input elements including:</p>
+                        <pre><code>const form5 = document.querySelector("#form5");
+    form5.addEventListener("submit", function (e) {
+        e.preventDefault();</code></pre>
+                        <p>a. three checkbox elements with the values "Donut", "Bagel" and "Burger"</p>
+                        <p><strong>Answers : </strong></p>
+                        <pre><code>const food = [...document.querySelectorAll("input[name='food']:checked")].map(cb => cb.value);
+        console.log("Selected Food Items:", food.join(", ") || "None");</code></pre>
+                        <p>b. three radio elements with the values "Dog", "Cat" and "Fish"</p>
+                        <p><strong>Answers : </strong></p>
+                        <pre><code>const pet = document.querySelector("input[name='pet']:checked");
+        console.log("Preferred Pet:", pet ? pet.value : "None");</code></pre>
+                        <p>c. a select element with three option elements "Apple", "Banana" and "Orange"</p>
+                        <p><strong>Answers : </strong></p>
+                        <pre><code>const fruit = document.querySelector("#fruitSelect").value;
+        console.log("Selected Fruit:", fruit);</code></pre>
+                        <p>d. a textarea element for multiline text entry</p>
+                        <p><strong>Answers : </strong></p>
+                        <pre><code>const feedback = document.querySelector("#feedback").value;
+        console.log("Feedback:", feedback);
+    });
+});</code></pre>
+                        <p>Attach a submit event listener to the form that prevents the default action and instead logs to the console what the user has entered/selected in the form</p>
+                        <ol>
+                            <li><strong>Hint 1 :</strong> Make sure to give input elements a suitable id and/or name to be able to determine which values were entered/selected by the user.</li>
+                            <li><strong>Hint 2 :</strong> Consult the lecture slides how to ensure that only one of the radio inputs can be selected at any time</li>
+                            <li><strong>Hint 3 :</strong> Don't just log plain values; provide some context information to make log messages easy to understand</li>
+                        </ol>
+                        <a href="#top">Go to top</a>
+                    </header>
+                </div>
+            </article>
+        </main><!--Close main page content -->
+
+        <aside>
+        </aside>
+
+
+        <footer>
+            <!--Footer content -->
+            <p><a href="#top">Go to top</a></p>
+            <p><a href="K.Ching1@uni.brighton.ac.uk">Email Website design and developer: Kary Ching</a></p>
+            <small>&copy; 2025, Kary C.</small>
+        </footer>
+
+    </div><!--Close 'wrappers' div -->
+</body><!--Close 'body' -->
+</html><!--Close 'html' -->

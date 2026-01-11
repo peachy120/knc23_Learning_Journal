@@ -1,0 +1,176 @@
+
+<!doctype html>
+<!--HTML5 doctype declaration -->
+<html lang="en">
+<!--default language of the document content -->
+
+<head>
+    <meta charset="utf-8"><!--character encoding for the document (Unicode) -->
+    <title>Kary's Learning Journal</title><!--web page title -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/stylesheet.css" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Strait" rel="stylesheet">
+    <script src="script/s9.js"></script>
+</head>
+
+<body>
+    <!--Markup all web page content inside the 'body' tags -->
+    <div id="wrappers">
+        <!--The 'wrappers' contains all the page content-->
+
+        <header class="banner">
+            <!--The main heading for the page -->
+            <h1>Java Script Lab Session 9</h1>
+            <h2>DOM 3 - Creating and Deleting Elements</h2>
+        </header>
+
+        <nav class="menu"><!--The primary navigation for the page -->
+            <ul>
+                <li><a href="index.html">Learning Journal</a></li>
+                <li><a href="tutorial.html">Tutorial</a></li>
+                <li><a href="lectureNotes.html">Lecture Notes</a></li>
+                <li><a href="jscriptlabs.html">Lab work</a></li>
+                <li><a href="contact.html">Contact me</a></li>
+                <li><a href="question.html">Possible Questions</a></li>
+                <li><a href="definition.html">Definition</a></li>
+            </ul>
+        </nav>
+
+        <nav>
+            <p>Lab Excerise</p>
+            <ol>
+                <li>Questions</li>
+                <li><a href="s2.html">Statement, Variables, Data Type</a></li>
+                <li><a href="s3.html">Control Structures</a></li>
+                <li><a href="s4.html">Working with Strings</a></li>
+                <li><a href="s5.html">Working with Arrays</a></li>
+                <li><a href="s6.html">Functions</a></li>
+                <li><a href="s7.html">DOM 1 - Introduce, Accessing Elements and Attributes</a></li>
+                <li><a href="s8.html">DOM 2 - Events, Listeners, Manipulating Elements</a></li>
+                <li><a href="s9.html">DOM 3 - Creating and Deleting Elements</a></li>
+                <li><a href="s10.html">Working with Forms</a></li>
+            </ol>
+        </nav>
+
+        <main>
+            <p id="p2" title="Title text">Content text</p>
+            
+            <img id="img3" src="image/Apple.jpg" width="300" height="300">
+            
+            
+            <article>
+                <div class="notes-contents">
+                    <header class="notes">
+                        <h3>Session 9 Tutorial Questions</h3>
+                        <p>2. Create a paragraph element in your HTML with the id p2 and a title attribute with some text. Add a click event listener to the paragraph that swaps the title attribute with the text content. The code should turn a paragraph like this: <code>p title="Title text", Content text, /p</code> into this: <code>p title="Content text", Title text, /p</code>and back again.</p>
+                        <p><strong>Answers : </strong></p>
+                        <pre><code>window.addEventListener("load", function () {
+    const p2 = document.querySelector("#p2");
+    p2.addEventListener("click", function () {
+        const temp = p2.textContent;
+        p2.textContent = p2.title;
+        p2.title = temp;
+    });</code></pre>
+                        <hr>
+                        <p>3. Create an image element in your HTML with the id img3, then find two images of the same size (e.g. 300x300 pixels) and use one of them as the image source. Add a click listener to the image that swaps out the images shown in the image element.</p>
+                        <p>hint: You can do this by reading and manipulating the src attribute of the image.</p>
+                        <p><strong>Answers : </strong></p>
+                        <pre><code>const img3 = document.querySelector("#img3");
+    const imgSrc1 = "image1.jpg";  // replace with your image path
+    const imgSrc2 = "image2.jpg";  // replace with your image path
+
+    img3.addEventListener("click", function () {
+        img3.src = img3.src.includes("image1.jpg") ? imgSrc2 : imgSrc1;
+    });</code></pre>
+                        <hr>
+                        <p>4. Create a button in your HTML with id btn4 and a div element with id div4. Add a click listener to the button that creates an unordered list <code>ul</code> from the array given below, with each array item being shown as a listitem <li> element. Append the list to the target div4. var list_content = ["Apple", "Banana", "Orange", "Mango", "Papaya"];</p>
+                        <p><strong>Answers : </strong></p>
+                        <pre><code>const list_content = ["Apple", "Banana", "Orange", "Mango", "Papaya"];
+    const btn4 = document.querySelector("#btn4");
+    const div4 = document.querySelector("#div4");
+
+    btn4.addEventListener("click", function () {
+        const ul = document.createElement("ul");
+        list_content.forEach(item => {
+            const li = document.createElement("li");
+            li.textContent = item;
+            ul.appendChild(li);
+        });
+        div4.innerHTML = "";  // clear existing content
+        div4.appendChild(ul);
+    });</code></pre>
+                        <hr>
+                        <p>5. Create a button in your HTML with id btn5 and a div element with id div5. Add a click listener to the button that creates a table from the two-dimensional array given below. Append the table to the target div5.</p>
+                        <pre><code>const table_content = [
+        ["Tom", 20, "BSc (Hons) Computer Science"],
+        ["Mary", 19, "BSc (Hons) Computer Science (Games)"],
+        ["Jerry", 21, "BSc (Hons) Digital Games Production"],
+        ["Jane", 19, "BSc (Hons) Digital Media"],
+        ["Olivia", 22, "BSc (Hons) Digital Media Development"],
+        ["Jack", 20, "BSc (Hons) Software Engineering"]
+    ];
+
+    const btn5 = document.querySelector("#btn5");
+    const div5 = document.querySelector("#div5");
+
+    btn5.addEventListener("click", function () {
+        const table = document.createElement("table");
+        table.border = 1;
+        table_content.forEach(rowData => {
+            const row = document.createElement("tr");
+            rowData.forEach(cellData => {
+                const cell = document.createElement("td");
+                cell.textContent = cellData;
+                row.appendChild(cell);
+            });
+            table.appendChild(row);
+        });
+        div5.innerHTML = "";
+        div5.appendChild(table);
+    });</code></pre>
+                        <hr>
+                        <p>6. Create a button in your HTML with id btn6 and a div element with id div6. Add a click listener to the button that creates 10 paragraph elements with the text "This is paragraph <code>n</code>" and appends them to the target div6.</p>
+                        <p><strong>Answers : </strong></p>
+                        <pre><code>const btn6 = document.querySelector("#btn6");
+    const div6 = document.querySelector("#div6");
+
+    btn6.addEventListener("click", function () {
+        for (let i = 1; i <= 10; i++) {
+            const p = document.createElement("p");
+            p.textContent = `This is paragraph ${i}`;
+            div6.appendChild(p);
+        }
+    });</code></pre>
+                        <hr>
+                        <p>7. Create a button in your HTML with id btn7 and add a click listener to it that removes all paragraphs from target div6. This should work together with the previous question and lead to two buttons that dynamically create and remove paragraph elements</p>
+                        <p>hint: Study the slides how to efficiently remove all child nodes from an element.</p>
+                        <p><strong>Answers : </strong></p>
+                        <pre><code>const btn7 = document.querySelector("#btn7");
+
+    btn7.addEventListener("click", function () {
+        while (div6.firstChild) {
+            div6.removeChild(div6.firstChild);
+        }
+    });
+});</code></pre>
+                        <a href="#top">Go to top</a>
+                    </header>
+                </div>
+            </article>
+        </main><!--Close main page content -->
+
+        <aside>
+        </aside>
+
+
+        <footer>
+            <!--Footer content -->
+            <p><a href="#top">Go to top</a></p>
+            <p><a href="K.Ching1@uni.brighton.ac.uk">Email Website design and developer: Kary Ching</a></p>
+            <small>&copy; 2025, Kary C.</small>
+        </footer>
+
+    </div><!--Close 'wrappers' div -->
+</body><!--Close 'body' -->
+</html><!--Close 'html' -->

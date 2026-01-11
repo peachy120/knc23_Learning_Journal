@@ -1,0 +1,1800 @@
+﻿
+<!doctype html>
+<!--HTML5 doctype declaration -->
+<html lang="en">
+<!--default language of the document content -->
+
+<head>
+    <meta charset="utf-8"><!--character encoding for the document (Unicode) -->
+    <title>Kary's Learning Journal</title><!--web page title -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/stylesheet.css" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Strait" rel="stylesheet">
+</head>
+
+<body>
+    <a id="top"></a>
+    <!--Markup all web page content inside the 'body' tags -->
+    <div id="wrappers">
+        <!--The 'wrappers' contains all the page content-->
+
+        <header class="banner">
+            <!--The main heading for the page -->
+            <h1>My Lecture Notes</h1>
+            <h2>Updating...</h2>
+        </header>
+
+        <nav class="menu">
+            <!--The primary navigation for the page -->
+            <ul>
+                <li><a href="index.html">Learning Journal</a></li>
+                <li><a href="tutorial.html">Tutorial</a></li>
+                <li>Lecture Notes</li>
+                <li><a href="jscriptlabs.html">Lab work</a></li>
+                <li><a href="contact.html">Contact me</a></li>
+                <li><a href="question.html">Possible Questions</a></li>
+                <li><a href="definition.html">Definition</a></li>
+            </ul>
+        </nav>
+
+        <nav>
+            <h3>My Weekly Lecture Notes</h3>
+            <ol>
+                <li><a href="#Lecture1.1">Intoduction to Web Development</a></li>
+                <li><a href="#Lecture1.2">HTML Markup Basics</a></li>
+                <li><a href="#Lecture2.1">HTML Document Structure</a></li>
+                <li><a href="#Lecture2.2">Cascading Stylesheets (CSS) 1</a></li>
+                <li><a href="#Lecture3.1">Cascading Stylesheets (CSS) 2</a></li>
+                <li><a href="#Lecture3.2">Responsive Web Development 1</a></li>
+                <li><a href="#Lecture4.1">Responsive Web Development 2</a></li>
+                <li><a href="#Lecture4.2">Responsive Web Development 3</a></li>
+                <li><a href="#Lecture5.1">HTML Forms and Styling</a></li>
+                <li><a href="#Lecture5.2">Testing and Evaluation</a></li>
+                <li><a href="#Lecture6">Exam Preparation</a></li>
+                <li><a href="#Lecture7.1">Introduction to JavaScript</a></li>
+                <li><a href="#Lecture7.2">Variable, Datatypes and Operators</a></li>
+                <li><a href="#Lecture8.1">Control Structures and Operators</a></li>
+                <li><a href="#Lecture8.2">Working with Strings</a></li>
+                <li><a href="#Lecture9.1">Working with Arrays</a></li>
+                <li><a href="#Lecture9.2">Functions and scope</a></li>
+                <li><a href="#Lecture10.1">Document Object Model 1</a></li>
+                <li><a href="#Lecture10.2">Document Object Model 2</a></li>
+                <li><a href="#Lecture11.1">Document Object Model 3</a></li>
+                <li><a href="#Lecture11.2">Working with forms</a></li>
+                <li><a href="#Lecture12">Exam and Revision</a></li>
+                <li><a href="#refs">References</a></li>
+            </ol>
+        </nav>
+
+        <main>
+            <!--The main page content -->
+            <h2>Weekly Lecture Notes</h2>
+            <article>
+                <div class="notes-contents">
+                    <header class="notes">
+                        <h3><a id="Lecture1.1"></a>Week 1 - Session 1 - Lecture: Intoduction to Web Development</h3>
+                        <P><Strong>What has changed in <b>25 years</b> of time on the web?</Strong></P>
+                        <ul>
+                            <li><b>Technology</b> - E.g. New devices, screen width, easy to interact with media</li>
+                            <li>The way the web provide <b>services</b> and support organisation</li>
+                            <li><b>User Experience</b> and <b>expectations</b></li>
+                            <li><b>Roles</b> and <b>skills</b></li>
+                            <li>The way to <b>design</b> and <b>develop</b> the web</li>
+                            <li>Where <b>content</b> came from</li>
+                        </ul>
+                        <p><strong>Responsive Web Design</strong></p>
+                        <p>User nowadays use many different kinds of devices which each has a different <b>screen width</b> - E.g. Mobile, Tablet, Laptop, TV, etc. Also able to use the device <b>wherever</b> and <b>whenever</b> they want - E.g. Street, Home, Transport, etc...</p>
+                        <p>To create a responsive Website means it should be accessible for user <b>anytime</b>, <b>anywhere</b> and on <b>any devices</b>. Also, it has to provide the <b>same amount</b> of <b>information</b>, <b>functions</b> and <b>user experience</b></p>
+                        <p><strong>History of Web Development Standards</strong></p>
+                        <p>World Wide Web (WWW) was invented in <b>1989</b> by <b>Berners-Lee</b>. Aim to <b>share scientific documents over networks</b></p>
+                        <p>Since 1993, each Web browser has it own <b>Hyper-Text Markup Language (HTML)</b> - each Webpage as a different one</p>
+                        <p>There was a browser war between Netsacpe and Microsoft's Internet Explorer</p>
+                        <p>Since 1994, the <b>World Wide Web Consortium (W3C)</b> has standardlise the development of Web. Which is benificial:</p>
+                        <ul>
+                            <li>Can be <b>displayed</b> on any standards browser, platform and device</li>
+                            <li>People with disablities can still access the content within the webpage</li>
+                            <li>Can be access on older browser, E.g. Lynx, speech, etc</li>
+                            <li>The code is easier to read and change, which saves time and money</li>
+                            <li>Helps to improve <b>Search Engine Rankings</b></li>
+                        </ul>
+                        <p><strong>The Standard-Compliant HTML Document</strong></p>
+                        <pre><code>!doctype html
+html lang="en"
+head
+meta charset="UTF-8" /
+title, Home page, /title
+/head
+body
+p, Hello world, /p
+/body
+/html</code></pre>
+                        <p><code>!doctype html</code>: Doctype declaration for HTML5 standard</p>
+                        <p><code>html lang="en"</code>: Main <b>language</b> of the document</p>
+                        <p><code>head</code>: Document Head</p>
+                        <p><code>meta charset="UTF-8" /></code>: unicode character set</p>
+                        <p><code>title</code>: Appears on the website tag</p>
+                        <p><code>body</code>: Document Body</p>
+                        <p><code>h1, h2, p, ...</code>: Content marked up with HTML tags, different tags give out different output</p>
+                        <p><strong>Standard-Compliant Browsers</strong></p>
+                        <p><b>HTML</b> - Written for both <b>human user</b> and <b>browsers</b></p>
+                        <p>Web Brower is a <b>powerful software application</b> that <b>retrieves</b> and <b>read</b> HTML, CSS, ...files. Also <b>renders the webpage</b></p>
+                        <p><strong>Web Standards</strong></p>
+                        <p>It specify the <b>"syntax"</b> and <b>"semantics"</b> of web markup languages, like: HTML and CSS</p>
+                        <p><b>Syntax</b>: format and rules of user</p>
+                        <ul>
+                            <li>Tags are <b>lowercase</b></li>
+                            <li>Tags are <b>explicity closed with "/"</b>, E.g. <code> /p </code></li>
+                            <li>Tags are <b>nested correctly</b></li>
+                        </ul>
+                        <p><b>Semantics</b>: meaning</p>
+                        <ul>
+                            <li>Tags are <b>markup text</b> in a meaningful way, E.g. <code> p </code>: A paragraph of text</li>
+                        </ul>
+                        <p>Seperation of Content and Presentation</p>
+                        <ul>
+                            <li>HTML markup <b>specifies the structure of the content of a webpage</b> in a meaningful way</li>
+                            <li>HTML should <b>not be use to define how a webpage should be displayed</b></li>
+                            <li>CSS is the language that <b>specifies how to content should be presented</b> by a browser</li>
+                            <li>CSS stylesheet are <b>linked from the head of the HTML document</b> that they styled - <code>link href="css/stylesheet.css" rel="stylesheet"</code></li>
+                        </ul>
+                        <a href="#top">Go to top</a>
+                        <hr>
+                        <h3><a id="Lecture1.2"></a>Week 1 - Session 2 - Lecture: HTML Markup Basics</h3>
+                        <p><strong>Strict Syntax</strong></p>
+                        <ul>
+                            <li><b>MUST</b> have <code> !doctype html </code></li>
+                            <li>Tags <b>MUST</b> be <b>always closed</b>, E.g. <code> /h1 </code></li>
+                            <li>Tags <b>MUST</b> be in <b>lowercase</b>, E.g. <code> h1 </code></li>
+                            <li>Attribute names <b>MUST</b> be in <b>lowercase</b>, E.g. <code>width = "200"</code></li>
+                            <li>Attribute values <b>MUST</b> be <b>nested in quotes</b></li>
+                            <li>Elements <b>MUST</b> be <b>correctly nested</b></li>
+                        </ul>
+                        <p><strong>HTML markup</strong></p>
+                        <p>Comes from <b>pre-digital print industry</b>, uses <b>code words</b> and <b>symbols</b> to instruct compositors how to set the wriiten content into type for printing</p>
+                        <p>The way that early word processors worked before the Graphical User Interface (GUI)</p>
+                        <p><b>HTML semantics</b>: a markup language is meaningful to both computer and humans</p>
+                        <p>Pairs of markers - Tags, which are applied before and after content or data to define its structure</p>
+                        <ul>
+                            <li><strong>Important</strong> text: <code>strong</code></li>
+                            <li><em>Emphatic</em> text: <code>em</code></li>
+                        </ul>
+                        <p>Instructs the browser how to structure the content</p>
+                        <p>An HTML webpage is <b>ade up of different elements</b>m. Starting with a tag and ending with a matching tag</p>
+                        <p>There are a few <b>self-closing</b> tags, which is a single closed tags. E.g. line breaks <code>br</code>, <code>hr</code> or image <code>img src="filename/photoName.png/jpg"</code></p>
+                        <p><strong>HTML5 section elements</strong></p>
+                        <p>It includes new semantic page section elements instead of using <code>div</code> for every section</p>
+                        <ul>
+                            <li><code>header</code></li>
+                            <li><code>nav</code></li>
+                            <li><code>main</code></li>
+                            <li><code>section</code></li>
+                            <li><code>article</code></li>
+                            <li><code>aside</code></li>
+                            <li><code>footer</code></li>
+                        </ul>
+                        <p><strong>Block VS Inline elements</strong></p>
+                        <p>Block elements: Starts on a new line, it can contain nested inline elements or other block elements. E.g. <code>h1</code>, <code>p</code>, <code>ol</code>, <code>ul</code>, etc. </p>
+                        <p>Inline elements: Nested within the block elements, CANNOT contain any block elements but can contain other inline elements. E.g. <code>em</code>, <code>strong</code>, etc.</p>
+                        <a href="#top">Go to top</a>
+                    </header>
+                </div>
+                <p></p>
+                <div class="notes-contents">
+                    <header class="notes">
+                        <h3><a id="Lecture2.1"></a>Week 2 - Session 1 - Lecture: HTML Document Structure</h3>
+                        <p>An element is made out of : <b>start tag</b>, <b>content</b> and <b>end tag</b></p>
+                        <p><strong>HTML5 section elements</strong></p>
+                        <p><b>class</b> attribute: Use to <b>identify elements of the same class</b>. Allow <b>more than one</b> occurrence within the web document</p>
+                        <p><b>id</b> attribute: Use to <b>uniquely identify an element</b>. Allow <b>only one</b> within the while web document</p>
+                        <p><code>div</code> tags : Used to markup grouped content in a document in roder to style these elements with CSS properties</p>
+                        <p><strong>HTML5 section element semantics</strong></p>
+                        <p><code>header</code> : <b>Header</b> of the web document or content in a document</p>
+                        <p><code>nav</code> : <b>Navigation</b> for a document, which contains links to other section of the current document ot other documents</p>
+                        <p><code>main</code> : <b>Contains the main content</b> of the page. Only <b>appears onces</b> in each webpage</p>
+                        <p><code>aside</code> : <b>Section</b> of the page with content that is seperate from the main content. Often appears in a sidebar</p>
+                        <p><code>article</code> : <b>Self-contained chunk of content</b>. Like a magazine style page</p>
+                        <p><code>footer</code> : Content at the <b>foot of a document</b>. Like Author details and date</p>
+                        <p><strong>Navigating content: Anchors / Links</strong></p>
+                        <p>Skipping from topic to topic follwing a trail of links</p>
+                        <p>Hypertext navigation is achieved through anchors by using the <code>a</code> tag to anchor together 2 seperate but related pages or pieces of information</p>
+                        <p>Link anchors point the browers to a destination: </p>
+                        <ul>
+                            <li><strong>Internal link</strong> : Another section of the same page</li>
+                            <li><strong>Local link</strong> : Another page on the site</li>
+                            <li><strong>External link</strong> : Another website</li>
+                            <li><strong>Email link</strong> : An email address</li>
+                        </ul>
+                        <pre><code>a href="xxx.html" xxxxx /a</code></pre>
+                        <p><code>a</code> - tells the browser to link to another resource follwing with a <code>/a</code></p>
+                        <a href="#top">Go to top</a>
+                        <hr>
+                        <h3><a id="Lecture2.2"></a>Week 2 - Session 2 - Lecture: Cascading Stylesheets (CSS) 1</h3>
+                        <p><strong>Cascading Style Sheets Development</strong></p>
+                        <p>CSS is a <b>declarative language</b> for specifying the presentation if HTML elements by a browser</p>
+                        <p>Can easily style HTML pages</p>
+                        <p><strong>Cascading Style Sheets</strong></p>
+                        <p>Lead to economies in websites developmetns and maintenance: <b>Structure of Content (HTML)</b> and <b>presentation (CSS)</b></p>
+                        <p>Can <b>attach different stylesheets</b> to the same HTML document</p>
+                        <p>To attach an external stylesheet: </p>
+                        <pre><code>link href="stylesheet.css" rel="stylesheet"</code></pre>
+                        <p><code>href</code> attribute <b>points to the stylesheet file</b></p>
+                        <p><code>rel</code> attribute <b>specifies the relationship between</b> the <b>web document</b> and <bthe file></b> it is linked to</p>
+                        <p><strong>Embedded and inline CSS</strong></p>
+                        <p>The style are written inside <code>style</code> tags and <code>head</code> of th HTML document</p>
+                        <p>Both will over-ride an external stylesheet, which will cause pages hareder to debug, change and maintain</p>
+                        <p><strong>CSS Syntax</strong></p>
+                        <p>Rules that specify <b>how the browser should present the element in the HTML document</b></p>
+                        <ul>
+                            <li>The selector which <b>targets an HTML element</b></li>
+                            <li>One or more declaration, inside curly braces, state how the element will be displayed</li>
+                        </ul>
+                        <p>declaration:</p>
+                        <ul>
+                            <li>Property: the name of some aspect of presentation. E.g. font-size, background-color,etc.</li>
+                            <li>Value: For the property. E.g. 14px, #FFFFFF</li>  
+                        </ul>
+                        <p><strong>Rule or Declaration</strong></p>
+                        <p><b>Selectors</b> - target all the same element</p>
+                        <p><b>Value</b> - for the property</p>
+                        <p><b>Property</b> - Features of an element that can be styled</p>
+                        <p>NOTE: punctuation and spaces are very Important</p>
+                        <p><strong>CSS properties</strong></p>
+                        <ul>
+                            <li><b>Straightforword</b>, while <b>must be free errors</b></li>
+                            <li>When properties are combined in a rule, they can be use to create <b>graphic effects</b> like: rollovers, patterns, gradient and layout</li>
+                        </ul>
+                        <p><strong>class selector VS id seletor</strong></p>
+                        <p><b>class selector</b>: has a <b>full stop</b> follwed by the class attribute value</p>
+                        <p><b>id selector</b>: has a <b>hasgtag</b> followed by the class attribute value; It can only be used only once in an HTML document</p>
+                        <p><strong>Pseudo-class selector</strong></p>
+                        <p>Targets the element in its different state</p>
+                        <ul>
+                            <li><strong><code>a:link</code></strong> Source anchor of a <b>hyperlink</b></li>
+                            <li><strong><code>a:visited</code></strong> Source anchor of a <b>visited link</b></li>
+                            <li><strong><code>a:hover</code></strong> Anchor when the user move cursor over it</li>
+                            <li><strong><code>a:active</code></strong> Anchor when the user clicks down on it</li>
+                            <li><strong><code>a:focus</code></strong> When anchor gains keyboard focus</li>
+                        </ul>
+                        <a href="#top">Go to top</a>
+                    </header>
+                </div>
+                <p></p>
+                <div class="notes-contents">
+                    <header class="notes">
+                        <h3><a id="Lecture3.1"></a>Week 3 - Session 1 - Lecture: Cascading Stylesheets (CSS) 2</h3>
+                        <p><strong>CSS box model</strong></p>
+                        <p><b>Controls</b> how elements are <b>displayed and position on a web page</b></p>
+                        <P>Each HTML element is treated as if it is a box</P>
+                        <p>Some of this elements are blocked level which mean it takes up a whole line on the page</p>
+                        <p>Other element are inline level which are <b>nested wihtin the a block element</b></p>
+                        <p>Can be organised in a <b>sequence</b>, one after another or nested wihtin other boxes</p>
+                        <p>A <b>box model</b> describes the <b>space taken up by an element</b></p>
+                        <p>A box have <b>4</b> edges:</p>
+                        <ul>
+                            <li><b>margin edge</b></li>
+                            <li><b>border edge</b></li>
+                            <li><b>padding edge</b></li>
+                            <li><b>content edge</b></li>
+                        </ul>
+                        <p>Can use <b>padding property</b> to <b>create space inside the element</b>: <b>between the content and the edge</b> of the padding</p>
+                        <p>Use <b>margin property</b> to <b>create space outside the element</b> between it and adjacent element</p>
+                        <p><strong>Styling the box - background</strong></p>
+                        <p>Properties can be styled for all regions of the box</p>
+                        <p>The <b>default id transparent</b></p>
+                        <p>Can style the background with these</p>
+                        <ul>
+                            <li><code>background</code></li>
+                            <li><code>background-color</code></li>
+                            <li><code>background-image</code></li>
+                            <li><code>background-repeat</code></li>
+                            <li><code>background-position</code></li>
+                        </ul>
+                        <p><strong>CSS units</strong></p>
+                        <p>Defines the length: the distance value of elements</p>
+                        <p>Absolute : </p>
+                        <ul>
+                            <li><strong>in</strong> - inches</li>
+                            <li><strong>cm</strong> - centimeters</li>
+                            <li><strong>mm</strong> - millimeters</li>
+                            <li><strong>pt</strong> - points, which = 1/72 inches</li>
+                        </ul>
+                        <p>Relative : </p>
+                        <ul>
+                            <li><strong>px</strong> - computer screen pixels</li>
+                            <li><strong>%</strong> - percentage of another value</li>
+                            <li><strong>rem</strong> - font size of the root element</li>
+                            <li><strong>em</strong> - font size of the elemenet</li>
+                            <li><strong>vw</strong> - 1% of viewport width</li>
+                            <li><strong>vh</strong> - 1% of the viewport height</li>
+                        </ul>
+                        <p><strong>Absolute VS Relative lenght units</strong></p>
+                        <p>Absolute: </p>
+                        <ul>
+                            <li><b>Fixed</b> measurements</li>
+                            <li>Can only work if the <b>browser knew precisely the display resolution of the screen and size of the device viewport</b></li>
+                        </ul>
+                        <p>Relative: </p>
+                        <ul>
+                            <li><b>No fixed</b> value, size is relative to a value specified for another property</li>
+                            <li>px, %, rem, em, vw and vh are most commonly used in web development</li>
+                        </ul>
+                        <p><b>pixel</b> : gives an illusion of control</p>
+                        <p><b>percentage</b> : provides excellent flexibility in designing fluid web pages, elements that adjust to fit in the browser viewport</p>
+                        <p><b>em</b> : the most scaleable relative lenght unit, use to specify the measurement of any CSS box property; the default size is 16px</p>
+                        <p><b>rem</b> : A lot easier to understand than em. It is equal to the value ofd the font-size of the root element</p>
+                        <p><b>vw, vh</b> : viewport percentage lengths define the size of an element relative to the size of the viewport, vm is mainly used in web typography as it allows text to resize depend on the viewport size</p>
+                        <a href="#top">Go to top</a>
+                        <hr>
+                        <h3><a id="Lecture3.2"></a>Week 3 - Session 2 - Lecture: Responsive Web Development 1</h3>
+                        <p><strong>Responsive web design</strong></p>
+                        <p>For any web project, this factors are all very important</p>
+                        <ul>
+                            <li>Will site be <b>accessed by a small screen mobile device?</b></li>
+                            <li>Will users <b>access the site by more than one type of device?</b></li>
+                            <li>Will users expect the <b>same quality of user experience and content from mobile, tablet and desktop web access?</b></li>
+                            <li>Will users expect the <b>same functionality from mobile, tablet and desktop web access?</b></li>
+                        </ul>
+                        <p>Web designers and developers have <b>no control over how users are accessing the web</b> - it's important to design a user experience that caters for all</p>
+                        <p>Large number of variables – large screen smart TVs, e-book reader, games consoles, desktop, laptop, hi-res retina screens, tablet, mobile – different aspect ratios, landscape/portrait screen orientation</p>
+                        <p><strong>RWD - 3 techniques to learn</strong></p>
+                        <ol>
+                            <li><strong>layout</strong></li>
+                            <li>Use these units to size elements, E.g. %, em, rem</li>
+                            <li>CSS layout modules, E.g. grids, flexbox, multi-column</li>
+                            <li><strong>media queries</strong></li>
+                            <li>Detect media, viewport sizes, screen width, etc.</li>
+                            <li>Style elements for devices with different capabilities</li>
+                            <li><strong>media</strong></li>
+                            <li>Flexible images for different screen widths</li>
+                            <li>Flexible media containers, E.g. Videos</li>
+                        </ol>
+                        <p>Step 1 : The viewport meta element</p>
+                        <ul>
+                            <li>The viewport attribute for the meta element <b>allows the mobile device viewport to be set to a specific width</b></li>
+                            <li>Add the code below in the <code>head</code> and before the <code>link</code></li>
+                            <li><pre><code>meta name="viewport" content"width=device-width, initial-scale=1"</code></pre></li>
+                            <li><code>width=device-width</code> : sets the pixel widthof the viewport to be equal to the screen width of the device</li>
+                            <li><code>initial-scale=1</code> : Tells the browser to render the web page at full-size when it's loaded rather than scalling it down</li>
+                        </ul>
+                        <p>step 2 : CSS3 media queries</p>
+                        <ul>
+                            <li><b>CSS3 media queries are the things that make the web page responsive</b></li>
+                            <li>Inspects the <b>capabilities</b> of the device that is being access to a webpage, checking features: </li>
+                            <li>width and height of the <b>viewport</b></li>
+                            <li><b>device screen</b> width and height</li>
+                            <li><b>orientation</b> of the screen - landscape or portrait mode</li>
+                            <li><b>screen resolution</b></li>
+                            <li><b>aspect ratio</b> - the proportional relationship between display width and height</li>
+                            <li>Consists of a media type and one or more expression taht checks for particular media features such as width, height, screen resolution</li>
+                            <li>Logical expression</li>
+                            <li><code>@media screen</code></li>
+                        </ul>
+                        <p><b>Min & Max</b></p>
+                        <p><code>min</code> : equal to or greater than</p>
+                        <p><code>max</code> : equal to or smaller than</p>
+                        <p><b>breakpoint</b></p>
+                        <p>Queries test for the viewport <code>max-width</code> and/or <code>min-width</code> and appy a series of rules to optimise presentation</p>
+                        <p>Standard widths are often used as breakpoints</p>
+                        <a href="#top">Go to top</a>
+                    </header>
+                </div>
+                <p></p>
+                <div class="notes-contents">
+                    <header class="notes">
+                        <h3><a id="Lecture4.1"></a>Week 4 - Session 1 - Lecture: Responsive Web Development 2</h3>
+                        <p><strong>RWD - 3 techniques to learn</strong></p>
+                        <ol>
+                            <li>Fluid layout</li>
+                            <li>CSS media queries</li>
+                            <li>Responsive media</li>
+                        </ol>
+                        <p><b>Fluid Layout</b> : use realtive units yo size elements. Like: <code>%, em, rem, fr</code></p>
+                        <p><b>CSS media queries</b> : Detect <b>media, viewport size, screen widths</b>. Also <b>style elements</b> for devices with different capabilities</p>
+                        <p><b>Responsive media</b> : <b>Flexiable image</b> for different screen widths and media container</p>
+                        <p><strong>Image basic</strong></p>
+                        <p><b>Vector(SVG)</b> and <b>bitmap(PNG,JPG,GIF)</b> images are <b>displayed as pixel</b> on a computer device screen</p>
+                        <p><b>Screen resolution</b> refers to the number of pixel displayed per unit of length on the screen and depends on the size of the screen</p>
+                        <p><strong>Image display size VS file size</strong></p>
+                        <p>Imagee display size</p>
+                        <ul>
+                            <li><b>Image resolution</b> = <b>number of pixel in a linear inch of an image</b> width(W) * height(H). Measured in dots per inch(dpi)</li>
+                            <li><b>Pixel dimensions of an image</b> = the <b>number of pixel along its height and width</b></li>
+                            <li>File size is the size of an image file measured in kilobytes(K), megabytes(M) or gigabytes(G)</li>
+                            <li>File size and image quality increase in <b>direct proportion</b> to the resolution and pixel dimensions of an image</li>
+                            <li>File size is an issue - large image load slowly when views online and compromise web page usability</li>
+                            <li>Image for the web can be optimised to get the best trade-off between file size and image quality, which saves images at the right dimensions, resolution and acceptable quality</li>
+                        </ul>
+                        <p><strong>Flexible image</strong></p>
+                        <p><b>Bitmap images</b> have <b>fixed pixel dimensions</b> - height and width</p>
+                        <p><b>Pixel-size images</b> may <b>overflow</b> their containing elements</p>
+                        <p><b>Flexible image</b> measured as a <b>percentage of the element</b> in which thay are nested</p>
+                        <a href="#top">Go to top</a>
+                        <hr>
+                        <h3><a id="Lecture4.2"></a>Week 4 - Session 2 - Lecture: Responsive Web Development 3</h3>
+                        <p><strong>Multi-column modules</strong></p>
+                        <ul>
+                            <li><strong><code>column-count</code></strong> : Defines the number of columns. E.g. <code>column-count:2;</code></li>
+                            <li><strong><code>column-width</code></strong> : Defines the width of the columns. E.g. <code>column-width:20em;</code></li>
+                            <li><strong><code>column-gap</code></strong> : Defines the space between columns. E.g. <code>column-gap:2em;</code></li>
+                            <li><strong><code>column-rule</code></strong> : Defines the border between columns. E.g. <code>column-rule:1pz solid #ccc;</code></li>
+                            <li><strong><code>column-span</code></strong> : Defines an element that spans across columns. E.g. <code>column-rule:1px solid #ccc;</code></li>
+                            <li><strong><code>column-fill</code></strong> : Define how the browser will fill the column with content, but only applies to elements which have a height property / value. E.g. <code>column-fill:auto;</code></li>
+                        </ul>
+                        <a href="#top">Go to top</a>
+                    </header>
+                </div>
+                <p></p>
+                <div class="notes-contents">
+                    <header class="notes">
+                        <h3><a id="Lecture5.1"></a>Week 5 - Session 1 - Lecture: HTML Forms and Styling</h3>
+                        <p><strong>Forms</strong></p>
+                        <p>It is essential for web functionality and interactivity. For example:</p>
+                        <ul>
+                            <li>Converting website browser into customers and contributors</li>
+                            <li>Drivers for web application workflow</li>
+                            <li>E.g. e-commerce, e-gov, blogs,...</li>
+                        </ul>
+                        <p>To make forms interactive</p>
+                        <p>Use Script language. It is needed to make forms functional, like: to exchange data between the user and the website owner</p>
+                        <p><strong>Client-side VS Server-side</strong></p>
+                        <p><b>Client-side ( JavaScript )</b>: Can <b>check the accuracy of data</b> entered in the form before it is sent to the sever</p>
+                        <p><b>Server-side ( PHP, ASP.NET)</b>: <b>Process the data provided by the user</b>, checks it and send the appropriate response back to the user</p>
+                        
+                        <p><strong>Client server application architecture</strong></p>
+                        <ol>
+                            <li>Input data in form. E.g. Username and password</li>
+                            <li>Client validates login details and sends data to server</li>
+                            <li>Server validates details and sends back customer data</li>
+                            <li>Client display customer data on web page form</li>
+                        </ol>
+                        
+                        <p><strong>Form processing</strong></p>
+                        
+                        
+                        <p><strong>How form should be used</strong></p>
+                        <ul>
+                            <li>Laid out clearly and logically</li>
+                            <li>Give out clear guidance and feedback to users</li>
+                            <li>Have consistent design through out the whole website</li>
+                            <li>Use correct semantic HTML form elements</li>
+                        </ul>
+                        <p><strong>The HTML <code>form</code> element</strong></p>
+                        <p>All the form element must be nested within the <code>form</code> tag</p>
+                        <p>The <strong>action attribute</strong> is required as it is used to specify the Uniform Resource Indicator(URL) of a web page that process information submitted via the form</p>
+                        <p>The <strong>method attribute</strong> specifies the HTTP method for submitting form data to the server</p>
+                        <p><strong>The HTML <code>input</code> element</strong></p>
+                        <p>It is used for the interactive controls through which users can enter data into the form</p>
+                        <p>Input elements have a <strong>type attribute</strong> which is used to specify the type of control to display and the type of data that can be input throigh the control. E.g. <code>button, checkbox, radio, password, reset,...</code></p>
+                        <p>Input types are asscociated with specified controls</p>
+                        <p><strong>HTML <code>input</code> types examples</strong></p>
+                        
+                        
+                        
+                        <p><strong><code>input</code> type - text</strong></p>
+                        <pre><code>form
+    label for="XXX", xxx:, /label
+    input type="text" id="XXX"
+/form</code></pre>
+
+                        <p><strong><code>input</code> type - checkbox</strong></p>
+                        <p>Checkboxes are used to <b>select zero or more options</b> from a predefined list</p>
+                        <pre><code>form
+    label for="XXX", xxx, /label
+        input type="checkbox" id="XXX" checked
+    label for="YYY", yyy, /label
+        input type="checkbox" id="YYY"
+/form</code></pre>
+                        <p><code>input</code> is an inline element</p>
+
+                        
+                        <p><strong><code>input</code> type - radio button</strong></p>
+                        <p>A group of radio buttons is used when there is <b>only one option in a list can be checked</b></p>
+                        <pre><code>form
+    label, XXX, input type="radio" name="likes" value"XXX", /label
+    label, YYY, input type="radio" name="likes" value"YYY", /label
+    label, ZZZ, input type="radio" name="likes" value"ZZZ", /label
+/form</code></pre>
+                        <p>The name attribute links buttons in a group and enforce the single option</p>
+
+                        <p><strong><code>input</code> type - submit</strong></p>
+                        <pre><code>input type="submit" id="send" value="Send login details"</code></pre>
+                        
+                        <p><strong><code>input</code> type - button</strong></p>
+                        <p>The button input type is a button with <b>no default behaviour</b></p>
+                        <pre><code>input type="button" id="send" value="Send details"</code></pre>
+                        
+                        <p><strong><code>input</code> type - reset button</strong></p>
+                        <p>The reset input type is a button that when activated resets the form to its default state, which returns all the value in the input element to how they were before the user entered any data</p>
+                        <pre><code>input type="reset" id="reset" value="Clear from"</code></pre>
+                        
+                        <p><strong>HTML5 <code>input</code> types</strong></p>
+                        <ul>
+                            <li><code>date</code> : control is a calendar</li>
+                            <li><code>color</code> : control is a colour picker</li>
+                            <li><code>number</code> : control is a spinner for entering a number, it can also define min and max value as attribute</li>
+                            <li><code>range</code> : slider for entering a number in a range</li>
+                        </ul>
+
+                        <p><strong>Native HTML5 form validation</strong></p>
+                        <p>It displays an error message if the input is invalid</p>
+                        <p>Also can required a field must be completed by using a <strong>boolean attribute</strong> "required"</p>
+                        <pre><code>label for="XXX", xxx: , /label</code></pre>
+                        <pre><code>input id="XXX" type="text" required</code></pre>
+                        <p><strong>HTML login form CODE</strong></p>  
+                        <pre><code>form action="" method="post" id="contact"
+    fieldset id="login"
+    legend, Login details: , /legend
+        label for="username", User name: /label
+        input type="text" id="name" required
+        label for="password", Password: /label
+        input type="password" id="pwd" required
+    /fieldset
+/form</code></pre>
+
+                        <p><strong>HTML5 - placeholders</strong></p>
+                        <p>Used to display text within the formfield. When there is no value, it will show; When the user typed something in, it will be removed</p>
+                        
+                        <p><strong>Other form elements - <code>select</code></strong></p>
+                        <p>A drop down list control for selecting from a set of options</p>
+                        <pre><code>label for="list">What pet would you like for Xmas*?, /label
+select name="list" id="list" size="4"
+option value="dog" selected="selected", Dog, /option
+option value="cat", Cat, /option
+option value="rabbit", Rabbit, /option
+option value="tortoise", Tortoise, /option
+/select</code></pre>
+
+                        <p><strong>Other form elements - <code>textarea</code></strong></p>
+                        <p>Multiline plain text edit control for entering text data of a variable and unspecified length</p>
+                        <pre><code>label for="Comment", Comment: , /label
+textarea, /textarea
+                        </code></pre>
+
+                        <p><strong>HTML form elements</strong></p>
+                        <ul>
+                            <li><code>fieldset</code> - group related form element or blocks of data</li>
+                            <li><code>legend</code> - for the name of a fieldset</li>
+                            <li><code>label</code> - for describing a form element to the user and associating the description with the <code>input</code> element and control</li>
+                        </ul>
+                        <a href="#top">Go to top</a>
+                        <hr>
+                        <h3><a id="Lecture5.2"></a>Week 5 - Session 2 - Lecture: Testing and Evaluation</h3>
+                        <p>Testing and evaluating</p>
+                        <a href="#top">Go to top</a>
+                    </header>
+                </div>
+                <p></p>
+                <div class="notes-contents">
+                    <header class="notes">
+                        <h3><a id="Lecture6"></a>Week 6 - Lecture: Exam Preparation</h3>
+                        <p>About Exam</p>
+                        <a href="#top">Go to top</a>
+                    </header>
+                </div>
+                <p></p>
+                <div class="notes-contents">
+                    <header class="notes">
+                        <h3><a id="Lecture7.1"></a>Week 7 Session 1 - Lecture: Introduction to JavaScript</h3>
+                        <p><strong>Procedural VS Declarative</strong></p>
+                        <p><strong>rocedural :</strong>P Describes how things should be done.</p>
+                        <p><strong>Declarative :</strong> Describe how things should be.</p>
+                        <p><strong>Interpreted VS Complied</strong></p>
+                        <p>Interpreted :</p>
+                        <ol>
+                            <li>Read</li>
+                            <li>Translate source code each time upon exection.</li>
+                        </ol>
+                        <p><strong>Work flow :</strong> Code -> Run -> Code -> Run -> ...</p>
+                        <p>Compiled :</p>
+                        <ol>
+                            <li>Read</li>
+                            <li>Translate source code once into executable file.</li>
+                            <li>Execute a lot of times.</li>
+                        </ol>
+                        <p><strong>Work flow :</strong> Code -> Compile -> Run -> Code -> Compile -> Run -> ...</p>
+                        <p><strong>Weekly VS Strongly Typed</strong></p>
+                        <p><strong>Weekly Typed :</strong> Variable can hole any type of data.</p>
+                        <p>Example: </p>
+                        <pre><code>int x = 10;
+x = "hello";</code></pre>
+                        <p>This will NOT cause any ERROR</p>
+                        <p><strong>Strongly Typed :</strong> Variable are of a specific data type and can only hold data of that type</p>
+                        <p>Example: </p>
+                        <pre><code>int x = 10;
+x = "hello";</code></pre>
+                        <p>This will cause ERROR</p>
+                        <p><strong>Chrome Developer Tools</strong></p>
+                        <ul>
+                            <li>Inspect HTML, CSS and JavaScript</li>
+                            <li>Debug</li>
+                            <li>Analyse and Optimise</li>
+                        </ul>
+                        <p>To activate : CTRL + SHIFT + I OR right-click page and select inspect</p>
+                        <a href="#top">Go to top</a>
+                        <hr>
+                        <h3><a id="Lecture7.2"></a>Week 7 Session 2 - Lecture: Variable, Datatypes and Operators</h3>
+                        <p><strong>Primitive VS Non-Preimitive Date Type</strong></p>
+                        <p><strong>Primitive Date Type :</strong> A way of defining and grouping values that cannot be changed.</p>
+                        <p>JavaScript has 8 Primitive Types:</p>
+                        <ul>
+                            <li>Number</li>
+                            <li>String</li>
+                            <li>Boolean</li>
+                            <li>Undefined</li>
+                            <li>Null</li>
+                            <li>BigInt</li>
+                            <li>Symbol</li>
+                        </ul>
+                        <p><strong>Non-Premitive Data Type :</strong> Allows collection of primitve data values to be organised and processed.</p>
+                        <p>JavaScript has 2 Non-Primitive Types:</p>
+                        <ul>
+                            <li>Array</li>
+                            <li>Object</li>
+                        </ul>
+                        <p><strong>Variables</strong></p>
+                        <p>When variable is created, it can only hold one type of data if using Java or C++; it can hold different datatypes if it is using JavaScript</p>
+                        <p><strong>Data Types</strong></p>
+                        <p><strong>Numbers :</strong></p>
+                        <ul>
+                            <li>Are default folatin-point numbers with double precision.</li>
+                            <li>Can have decimail places</li>
+                            <li>Negative Number can using a minus sign in front of the number</li>
+                            <li>Has 3 symbolic values: +Infinity, -Infinity and NaN(Not a Number)</li>
+                        </ul>
+                        <p><strong>Arithmetic Operators</strong></p>
+                        <ol>
+                            <li>Addition: <code>console.log(a + b)</code></li>
+                            <li>Subtraction: <code>console.log(a - b)</code></li>
+                            <li>Multiplication: <code>console.log(a * b)</code></li>
+                            <li>Division: <code>console.log(a / b)</code></li>
+                            <li>Modulo: <code>console.log(a % b)</code></li>
+                        </ol>
+                        <p><strong>Increment and Decrement</strong></p>
+                        <p><b>Increment (++)</b> : Increases the value by 1</p>
+                        <p><code>year++;</code> == <code>year = year + 1;</code></p>
+                        <p><b>Decrement (--)</b> : Decreases the value by 1</p>
+                        <p><code>year--;</code> == <code>year = year - 1;</code></p>
+                        <p>Operator precedence: Arithmetic operation are executed in (BODMAS):</p>
+                        <ol>
+                            <li><strong>B</strong>racket first</li>
+                            <li><strong>O</strong>rders (Powers, Roots, Increments)</li>
+                            <li><strong>D</strong>ivision and <strong>M</strong>ultiplication</li>
+                            <li><strong>A</strong>ddition and <strong>S</strong>ubtraction</li>
+                        </ol>
+                        <p><strong>String :</strong></p>
+                        <ul>
+                            <li>Enclosed in single quotes or double quotes</li>
+                            <li><code>mood_str = "happy"</code> OR <code>mood_str = 'happy'</code></li>
+                            <li>If strings contains single quote, like : don't, won't, etc. Must be escaped using a <code>\</code></li>
+                            <li><code>let mood = "don't ask";</code> OR <code>let mood = 'don\'t ask';</code></li>
+                            <li>It can be Concatenated with other strings and any other data type with the "+" sign</li>
+                        </ul>
+                        <p><strong>Boolean :</strong></p>
+                        <ul>
+                            <li>Values are either: True OR False</li>
+                        </ul>
+                        <p>If it use string value in arithmetic operation, JavaScript automatically converts it to a number which it happeds silently and cause errors</p>
+                        <p>To convert Strings into numbers:</p>
+                        <pre><code>var fahrenheit_str = "95";
+var fahrenheit = parseInt(fahrenheit_str);
+var celsius = (fahrenheit - 32) / 1.8;</code></pre>
+                        <p><strong>Array :</strong></p>
+                        <ul>
+                            <li>List-like objects containing multiple values.</li>
+                            <li>Values are accessed by an index.</li>
+                            <li>Indices start at 0 not 1.</li>
+                            <li>Can be decalred with [].</li>
+                        </ul>
+                        <p><strong>Objects :</strong></p>
+                        <ul>
+                            <li>Have a set of properties and/or methods</li>
+                            <li>JavaScripts object can be decalred with {}</li>
+                        </ul>
+                        <p><strong>Determining types :</strong></p>
+                        <p><code>typeof</code>: used to find the type of variable</p>
+                        <ul>
+                            <li>Number: <code>console.log(typeof 42);</code></li>
+                            <li>String: <code>console.log(typeof "42");</code></li>
+                            <li>Boolean: <code>console.log(typeof true);</code></li>
+                            <li>Object: <code>console.log(typeof [1,2,3]);</code></li>
+                            <li>Object: <code>console.log(typeof {name: "Zoe", age: 21});</code></li>
+                        </ul>
+                        <a href="#top">Go to top</a>
+                    </header>
+                </div>
+                <p></p>
+                <div class="notes-contents">
+                    <header class="notes">
+                        <h3><a id="Lecture8.1"></a>Week 8 Session 1 - Lecture: Control Structures and Operators</h3>
+                        <p><strong>Control Structure</strong></p>
+                        <p><b>Selection</b> : Branching Structures</p>
+                        <ul>
+                            <li>Alternative statements are carried out depending on a condition</li>
+                            <li>Branching constructs include <code>if / else</code> and <code>switch / case</code></li>
+                        </ul>
+                        <p><strong>Basic <code>if</code> statement</strong></p>
+                        <p>One of the most common branching statements :</p>
+                        <pre><code>if (condition) {
+// statements for when condition is true
+}</code></pre>
+                        <p>If the condition evaluates to TRUE, then the statement is executed</p>
+                        <p><strong>Classic <code>if / else</code> statement</strong></p>
+                        <p>Often having 2 alternatives depending on a condition</p>
+                        <pre><code>if (condition) {
+// statements for when condition is true
+} else {
+// statements for when condition is false
+}</code></pre>
+                        <p>Evaluates as TRUE or FALSE and executes statement</p>
+                        <p><strong>Multiple <code>if / else</code> statement</strong></p>
+                        <p><code>if / else</code> statement can be chained together</p>
+                        <pre><code>if (dayOfTheWeek === 1) {
+console.log("Monday");
+} else if (dayOfTheWeek === 2) {
+    console.log("Tuesday");
+} else if (dayOfTheWeek === 3) {
+    console.log("Wednesday");
+} else if (dayOfTheWeek === 4) {
+    console.log("Thursday");
+} else if (dayOfTheWeek === 5) {
+    console.log("Friday");
+} else if (dayOfTheWeek === 6) {
+    console.log("Saturday");
+} else if (dayOfTheWeek === 7) {
+    console.log("Sunday");
+}</code></pre>
+                        <p><strong>Switch Statements</strong></p>
+                        <p>Alternative to multiple if-else statement, it is more suitable if these are a lot of possible condition</p>
+                        <pre><code>switch(day) {
+    case 0:
+        console.log("Monday");
+        break;
+    case 1:
+        console.log("Tuesday");
+        break;
+    case 2:
+        console.log("Wednesday");
+        break;
+    case 3:
+        console.log("Thursday");
+        break;
+    case 4:
+        console.log("Friday");
+        break;
+    case 5:
+        console.log("Saturday");
+        break;
+    case 6:
+        console.log("Sunday");
+        break;
+    default:
+        console.log("Invalid Day")
+}</code></pre>
+                        <p><strong>Iteration</strong> : Looping Structures</p>
+                        <ul>
+                            <li>Statements are carried out repeatedly whicle or until a condition is met</li>
+                            <li>includes : <code>while</code> and <code>for</code></li>
+                        </ul>
+                        <p><strong>Classic <code>while</code> loop</strong></p>
+                        <p>Use when the statement need to be repeated until it mets a condition</p>
+                        <pre><code>while (condition) {
+// statements;
+}</code></pre>
+                        <p><strong>Classic <code>for</code> loop</strong></p>
+                        <p>Use when statements need to be repeated for a certain amount of times</p>
+                        <pre><code>for(initialize; test; increment) {
+// statements;
+}</code></pre>
+                        <p><strong><code>do ... while</code> loop</strong></p>
+                        <p>Less common to use and it test conditions at the end of the loop instead at the beginning</p>
+                        <pre><code>do {
+// statement
+} while (condition);</code></pre>
+                        <p><strong>The <code>break</code> statement</strong></p>
+                        <ul>
+                            <li>Used to exit a block of statement regardless of the condition controlling its execution</li>
+                            <li>When exiting a block of a statement, the program execution resumes ith the first statement</li>
+                            <li>Typically used in <code>switch</code> statement and <code>loops</code></li>
+                        </ul>
+                        <p><strong>Comparison operators, Logical operator and Expression</strong></p>
+                        <p>Comparison operators and logical operators to formulate expression</p>
+                        <p>Expression evaluate, which can be TRUE or FALSE</p>
+                        <p><strong>Comparison Operators</strong></p>
+                        <p>Is use to compare values</p>
+                        <ul>
+                            <li><strong><code>></code></strong> : greater than</li>
+                            <li><strong><code>>=</code></strong> : greater than or equal to</li>
+                            <li><strong><code><</code></strong> : less than</li>
+                            <li><strong><code><=</code></strong> : less than or equal to</li>
+                            <li><strong><code>==</code></strong> : equal to</li>
+                            <li><strong><code>!=</code></strong> : not equal to (interpreted )</li>
+                            <li><strong><code>===</code></strong> : equal to</li>
+                            <li><strong><code>!==</code></strong> : not equal to (strict)</li>
+                        </ul>
+                        <p><strong>Testing for equality</strong></p>
+                        <p>JavaScript has 2 types of equality operations:</p>
+                        <ol>
+                            <li>With coercion == and its negation !=</li>
+                            <li>Without coercion === and its negation !==</li>
+                        </ol>
+                        <p>Best practice is to use === and !== to test for equality as it stay in control and aviod unexpected results</p>
+                        <p><strong>Logical operators</strong></p>
+                        <ul>
+                            <li><strong><code>&&</code></strong> : Logical AND. True if both operands are TRUE</li>
+                            <li><strong><code>||</code></strong> : Logical OR. True if either or both operand is TRUE</li>
+                            <li><strong><code>!</code></strong> : Logical NOT. Inverts the logical value of its operand</li>
+                        </ul>
+                        <hr>
+                        <h3><a id="Lecture8.2"></a>Week 8 Session 2 - Lecture: Working with Strings</h3>
+                        <p><strong>String Basic</strong></p>
+                        <p>One of JavaScript's primitive types but JavaScript also has a String object ith methods and properties.</p>
+                        <p>Declaring strings</p>
+                        <p>Strings are typically declared as literals, enclosed in either signle quotes or double quotes as delimiters</p>
+                        <p>String can also be created using String object directly</p>
+                        <p>Special characters</p>
+                        <p>Control characters and string delimiters used inside a string must be escaped with a backslash character</p>
+                        <p><strong>Concatenating strings</strong></p>
+                        <p>Strings can be concatenated with other strings by using the "+" sign</p>
+                        <pre><code>let greet_str = "Hello";
+let name_str = "Bob";
+let num = 1000000;
+let text_str = greet_str + " " + name_str
++ ", you have " + num
++ " followers (you wish)";
+console.log(text);</code></pre>
+                        <p><strong>String Methods and Properties</strong></p>
+                        <p><strong><code>String.length</code></strong></p>
+                        <p>This length property returns the number of characters in a string</p>
+                        <pre><code>string.length;</code></pre>
+                        <p>Example:</p>
+                        <pre><code>const msg_str = "Hi ";
+console.log(msg_str.length); // 3</code></pre>
+                        <p><strong><code>String.charAt()</code></strong></p>
+                        <p>This method returns the character at the specified position</p>
+                        <pre><code>String.charAT(index);</code></pre>
+                        <p>Example:</p>
+                        <pre><code>const msg_str = "Hello World";
+console.log(msg.charAt(0)); // H
+console.log(msg.charAt(1)); // e
+console.log(msg.charAt(6)); // W
+console.log(msg.charAt(msg.length-1)); //d</code></pre>
+                        <p><strong><code>String.indexOf()</code></strong></p>
+                        <p>This methods returns the index of the first occurrence of a given string or -1</p>
+                        <pre><code>String.indexOf(string, from);</code></pre>
+                        <p>Example:</p>
+                        <pre><code>let str = "Hello World";
+console.log(str.indexOf("H")); // 0
+console.log(str.indexOf("World")); // 6
+console.log(str.indexOf("l")); // 2
+console.log(str.indexOf("l", 5)); // 9</code></pre>
+                        <p><strong><code>String.toLowerCase()</code> & <code>String.toUpperCase()</code></strong></p>
+                        <p>This methods return the calling string's value converted to lowercase and uppercase letters</p>
+                        <pre><code>String.toLowerCase();</code></pre>
+                        <pre><code>String.toUpperCase();</code></pre>
+                        <p>Example:</p>
+                        <pre><code>let name = "Bob";
+console.log(name_str === "bob"); // false
+console.log(name_str === "BOB"); // false
+console.log(name_str.toLowerCase() === "bob"); // true
+console.log(name_str.toUpperCase() === "BOB"); // true</code></pre>
+                        <p><strong><code>String.trim()</code></strong></p>
+                        <p>The method returns the calling string's value with leading and trailing whitespace removed</p>
+                        <pre><code>String.trim();</code></pre>
+                        <p>Example:</p>
+                        <pre><code>let input_str = "spacecowboy99 ";
+let username_str = input_str.trim();
+if(username_str.length > 0) {
+console.log("login " + username_str);
+} else {
+alert("Please enter a valid username");
+}</code></pre>
+                        <p><strong><code>String.substr()</code></strong></p>
+                        <p>This method returns part of a string starting at index</p>
+                        <pre><code>String.substr(index [,length]);</code></pre>
+                        <p>Example:</p>
+                        <pre><code>let filename_str = "selfie.jpg";
+let dotIdx = filename_str.indexOf(".");
+let extension_str = filename_str.substr(dotIdx + 1);
+if(extension_str === "jpg"){
+console.log("JPEG Image");
+} else {
+console.log("Not a JPEG Image");
+}</code></pre>
+                        <p><strong><code>String.substring()</code> & <code>String.slice()</code></strong></p>
+                        <p>This methods returns part of a string at start up to the optional second parameter end</p>
+                        <pre><code>String.substring(start [,end]);</code></pre>
+                        <pre><code>String.slice(start [,end]);</code></pre>
+                        <p>Example:</p>
+                        <pre><code>let str = "Brighton";
+console.log(str.substr(1,5)); // "right"
+console.log(str.substring(1,5)); // "righ"
+console.log(str.slice(1,5)); // "righ"</code></pre>
+                        <p><strong><code>String.split()</code></strong></p>
+                        <p>This method splits a string into an array of substrings by seperating it along a seperator.</p>
+                        <pre><code>String.split([seperator[, limit]]);</code></pre>
+                        <p>Example:</p>
+                        <pre><code>let a, str = "May the force be with you";
+a = str.split(); // ["May the force be with you"]
+a = str.split(""); // ["M", "a", "y", " ", "t", "h", … "u"]
+a = str.split(" "); // ["May", "the", "force", … "you"]
+a = str.split(" ", 2); // ["May", "the"]
+a = str.split("th"); // ["May ", "e force be wi", " you"]</code></pre>
+                        <p><strong>Strings in ES6</strong></p>
+                        <p><strong><code>String.startWith()</code></strong></p>
+                        <p>This method determines whether a string starts with the specified string, returning TRUE or FALSE</p>
+                        <pre><code>String.startsWith(searchString[, position]);</code></pre>
+                        <p>Example:</p>
+                        <pre><code>let url = "https://www.brighton.ac.uk";
+if(url.startsWith("https:")) {
+console.log("secure connection");
+} else if(url.startsWith("http:")) {
+console.log("unsecured connection");
+} else {
+console.log("not a valid URL");
+}</code></pre>
+                        <p><strong><code>String.endsWith()</code></strong></p>
+                        <p>This method determines t=whether a string ends with the specified string, returning TRUE or FALSE</p>
+                        <pre><code>String.endsWith(searchString[, length]);</code></pre>
+                        <p>Example:</p>
+                        <pre><code>let filename = "file1.jpg";
+if(filename.endsWith(".jpg")
+|| filename.endsWith(".png")
+|| filename.endsWith(".gif")) {
+console.log(filename + " is an image");
+} else {
+console.log(filename + " is not an image");
+}</code></pre>
+                        <a href="#top">Go to top</a>
+                    </header>
+                </div>
+                <p></p>
+                <div class="notes-contents">
+                    <header class="notes">
+                        <h3><a id="Lecture9.1"></a>Week 9 Session 1 - Lecture: Working with Arrays</h3>
+                        <p><strong>Arrays</strong></p>
+                        <p>Arrays are list=like objects where data is accessed by an index starting from <strong>0</strong></p>
+                        
+                        <p>Arrays are good for serveral things :</p>
+                        <ul>
+                            <li>Processing lots of the same kind of thing</li>
+                            <li>Dealing with more than 1 thing</li>
+                            <li>Arrays and loops</li>
+                        </ul>
+                        <p>Reason we need Arrays</p>
+                        <ul>
+                            <li>Accessing and manipulating page elements</li>
+                            <li>Processing data from a server, like: Lists and tables</li>
+                            <li>Turning string into data we can work with</li>
+                        </ul>
+                        <p><strong>Declaring Arrays</strong></p>
+                        <p>Arrays can be declared in <strong>array literal notation</strong> and <strong>using Array Object</strong></p>
+                        <p>For array literal notation:</p>
+                        <p><code>let my_ary = [];</code> // Empty array</p>
+                        <p><code>let people_ary = ['Tom', 'Tim', 'Ann'];</code></p>
+                        <p>For using Array object</p>
+                        <p><code>let people_ary = new Array();</code> // Length not specified</p>
+                        <p><code>let people_ary = new Array(10);</code> // Length is specified</p>
+                        <p><strong>Reading and setting elements</strong></p>
+                        <p>Elements can be read and set using an integar index in square brackets following the name of the array</p>
+                        <p><code>elem = ary[index];</code> // Read element at index</p>
+                        <p><code>ary[index] = elem;</code> // Set element array at index</p>
+                        <p>Examples</p>
+                        <pre><code>let people_ary = ['Tim', 'Tom', 'Ann'];
+console.log(people_ary[0]);</code></pre>
+                        <p>Output : 'Tim'</p>
+                        <pre><code>console.log(people_ary[2]);</code></pre>
+                        <p>Output : 'Ann'</p>
+                        <pre><code>console.log(people_ary.length);</code></pre>
+                        <p>Output : 3</p>
+                        <pre><code>people_ary[2]='Bob';
+console.log(people_ary[2]);</code></pre>
+                        <p>Output : 'Bob'</p>
+                        <pre><code>people_ary[3]='Zoe';
+console.log(people_ary[3]);</code></pre>
+                        <p>Output : 'Zoe'</p>
+                        <pre><code>console.log(people_ary.length);</code></pre>
+                        <p>Output : 4</p>
+                        <p><strong>JavaScript Arrays</strong></p>
+                        <p>JavaScript Arrays are different from arrays in other language like Java, C++ and C#</p>
+                        <ul>
+                            <li>As it is a weakly typed language, it can contain elements of different data types</li>
+                            <li>It can have gaps</li>
+                            <li>Accessing non-existent array elements does not throw an error but simply returns the special value indefined</li>
+                        </ul>
+                        <p><strong>Properties and methods</strong></p>
+                        <ul>
+                            <li><code>Array.form()</code></li>
+                            <li><code>Array.isArray()</code></li>
+                            <li><code>Array.observe()</code></li>
+                            <li><code>Array.of</code></li>
+                            <li><code>Array.prototype.concat()</code></li>
+                            <li><code>Array.prototype.copyWithin()</code></li>
+                            <li><code>Array.prototype.entries()</code></li>
+                            <li><code>Array.prototype.every()</code></li>
+                            <li><code>Array.prototype.fill()</code></li>
+                            <li><code>Array.prototype.filter()</code></li>
+                            <li><code>Array.prototype.find()</code></li>
+                            <li><code>Array.prototype.findIndex()</code></li>
+                            <li><code>Array.prototype.flatMap()</code></li>
+                            <li><code>Array.prototype.flatten()</code></li>
+                            <li><code>Array.prototype.forEach()</code></li>
+                            <li><code>Array.prototype.Includes()</code></li>
+                            <li><code>Array.prototype.IndexOf()</code></li>
+                            <li><code>Array.prototype.join()</code></li>
+                            <li><code>Array.prototype.keys()</code></li>
+                            <li><code>Array.prototype.lastInedxOf()</code></li>
+                            <li><code>Array.prototype.map()</code></li>
+                            <li><code>Array.prototype.pop()</code></li>
+                            <li><code>Array.prototype.push()</code></li>
+                            <li><code>Array.prototype.reduce()</code></li>
+                            <li><code>Array.prototype.reduceRight()</code></li>
+                            <li><code>Array.prototype.reverse()</code></li>
+                            <li><code>Array.prototype.shift()</code></li>
+                            <li><code>Array.prototype.slice()</code></li>
+                            <li><code>Array.prototype.some()</code></li>
+                            <li><code>Array.prototype.sort()</code></li>
+                            <li><code>Array.prototype.splice()</code></li>
+                            <li><code>Array.prototype.toLocateString()</code></li>
+                            <li><code>Array.prototype.toSource()</code></li>
+                            <li><code>Array.prototype.toString()</code></li>
+                            <li><code>Array.prototype.unshift()</code></li>
+                            <li><code>Array.prototype.values()</code></li>
+                            <li><code>Array.unobservel()</code></li>
+                        </ul>
+                        <p><strong>Looping over an array</strong></p>
+                        <p><strong>For loop</strong></p>
+                        <p>We can do a series of statement for each element in an array in a for loop</p>
+                        <pre><code>let fruits_ary = ["apple", "pear", "mango”];
+for (let i = 0; i < fruits_ary.length; i++) {
+    console.log(fruits_ary[i]);
+}</code></pre>
+                        <p>Example: Adding up all the numbers in an array</p>
+                        <pre><code>let cost_ary = [5, 10, 41, 9, 24, 12];
+let total = 0;
+for (let i = 0; i < cost_ary.length; i++) {
+    total += cost_ary[i];
+}
+console.log(total);</code></pre>
+                        <p><strong>For Each</strong></p>
+                        <p>We can loop over arrays and execute a function on each element using <code>forEach()</code></p>
+                        <pre><code>let fruits_ary = ["apple", "pear", "mango"];
+Fruits_ary.forEach(function(item){
+console.log(item);
+});</code></pre>
+                        <p>Example: Adding up all the number in an array</p>
+                        <pre><code>let cost_ary = [5, 10, 41, 9, 24, 12];
+let total = 0;
+cost_ary.forEach(function(item){
+    total += item;
+});
+console.log(total);</code></pre>
+                        <p><strong>Using arrays like stacks</strong></p>
+                        <p>A statck is a LIFO -- Last In First Out data structure</p>
+                        <p>Elements within the stack are pushed on and popped off</p>
+                        <p>Mainly used in: redo and undo, forward and backward</p>
+                        <p><strong><code>Array.push()</code> and <code>Array.pop()</code></strong></p>
+                        <p><code>Array.push()</code> : Add the element at the end of the array, then return new length</p>
+                        <p><code>Array.pop()</code> : Remove the last element of arraty and return it</p>
+                        <p>Example</p>
+                        <pre><code>var ary = ['a', 'b'];
+console.log(ary.push('c'));</code></pre>
+                        <p>Output : 3 [= new length]</p>
+                        <pre><code>console.log(ary);</code></pre>
+                        <p>Output : ['a', 'b', 'c']</p>
+                        <pre><code>console.log(ary.push('d','e'));</code></pre>
+                        <p>Output : 5 [= new length]</p>
+                        <pre><code>console.log(ary);</code></pre>
+                        <p>Output : ['a', 'b', 'c', 'd', 'e']</p>
+                        <pre><code>console.log(ary.pop());</code></pre>
+                        <p>Output : 'e' [= popped element]</p>
+                        <pre><code>console.log(ary);</code></pre>
+                        <p>Output : ['a', 'b', 'c', 'd']</p>
+                        <pre><code>console.log(ary.pop());</code></pre>
+                        <p>Output : 'd' [= popped element]</p>
+                        <pre><code>console.log(ary);</code></pre>
+                        <p>Output : ['a', 'b', 'c']</p>
+                        <p><strong><code>Array.unshiift()</code> and <code>Array.shift()</code></strong></p>
+                        <p><code>Array.unshift()</code> : Add elements at the start of the array, then return new length</p>
+                        <p><code>Array.shift()</code> : Remove element[0] from the array and return it</p>
+                        <pre><code>let ary = ['a', 'b'];
+console.log(ary.unshift('c'));</code></pre>
+                        <p>Output : 3 [= new length]</p>
+                        <pre><code>console.log(ary);</code></pre>
+                        <p>Output : ['c', 'a', 'b']</p>
+                        <pre><code>console.log(ary.unshift('d','e’));</code></pre>
+                        <p>Output : 5 [= new length]</p>
+                        <pre><code>console.log(ary);</code></pre>
+                        <p>Output : ['d', 'e', 'c', 'a', 'b']</p>
+                        <pre><code>console.log(ary.shift());</code></pre>
+                        <p>Output : 'd' [= shifted element]</p>
+                        <pre><code>console.log(ary);</code></pre>
+                        <p>Output : ['e', 'c', 'a', 'b']</p>
+                        <pre><code>console.log(ary.shift());</code></pre>
+                        <p>Output : 'e' [= shifted element]</p>
+                        <pre><code>console.log(ary);</code></pre>
+                        <p>Output : ['c', 'a', 'b']</p>
+                        <p><strong><code>Array.splice()</code></strong></p>
+                        <p>Modifies an arry at any position by removing existing elements and/or adding new elements</p>
+                        <p><code>index</code> : Where to remove/add elements</p>
+                        <p><code>deleteCount</code> : Number of element to remove ( optional default"all", can be 0)</p>
+                        <p><code>e1, e2, ...</code> : Elements to be inserted (optional)</p>
+                        <p>Example</p>
+                        <pre><code>let ary = ['a', 'b'];
+ary.splice(1, 0, 'c');
+console.log(ary);</code></pre>
+                        <p>Output : ['a', 'c', 'b']</p>
+                        <pre><code>ary.splice(1, 1, 'd', 'e', 'f');
+console.log(a);</code></pre>
+                        <p>Output : ['a', 'd', 'e', 'f', 'b']</p>
+                        <pre><code>ary.splice(2, 2);
+console.log(a);</code></pre>
+                        <p>Output : ['a', 'd', 'b']</p>
+                        <p><strong>Sorting arrays</strong></p>
+                        <p><code>Array.sort();</code> : Modifies the array, putting the elements in ascending alphabetical order</p>
+                        <p>Example:</p>
+                        <pre><code>let people_ary = ['Jane', 'Stu', 'Bill', 'Tom'];
+people_ary.sort();
+console.log(people_ary); // ['Bill', 'Jane', 'Stu', 'Tom']</code></pre>
+                        <p><strong>Sorting numeric arrays</strong></p>
+                        <pre><code>let nums_ary = [20, 12, 7, 5, 22, 40, 72];
+nums_ary.sort();
+console.log(nums_ary);</code></pre>
+                        <p>Output : [12, 20, 22, 40, 5, 7, 72]</p>
+                        <p><code>sort()</code> can take an extra parameter is a comparison function</p>
+                        <p>A comparison function takes 2 values and returns a number</p>
+                        <pre><code>function compare(a, b) {
+    return a - b;
+}</code></pre>
+                        <p>The returned number determines the ordering of 2 array elements</p>
+                        <p>if value is smaller than 0 : a appears before b</p>
+                        <p>if value is larger then 0 : a appears after b</p>
+                        <p>if value equals to 0 : a and b appear in the original order</p>
+                        <p>Sorting in Ascending order</p>
+                        <pre><code>function ascending(a, b) {
+    return a - b;
+}                        
+let nums_ary = [20, 12, 7, 5, 22, 40, 72];
+nums_ary.sort(ascending);
+console.log(nums_ary);</code></pre>
+                        <p>Sorting in Descending order</p>
+                        <pre><code>function descending(a, b) {
+    return b - a;
+}
+var nums_ary = [20, 12, 7, 5, 22, 40, 72];
+nums_ary.sort(descending);
+console.log(nums);</code></pre>
+                        <p><strong>Converting between strings and arrays</strong></p>
+                        <p>A string is sequence of character and therefore very similiar to an array</p>
+                        <p>Use <code>String.split()</code> to convert a string to an array</p>
+                        <pre><code>var str = "May the force be with you";
+var arr = str.split(" ");
+console.log(arr);</code></pre>
+                        <p>Output : ["May", "the", "force", "be", "with", "you"]</p>
+                        <p>Use <code>Array.join()</code> to convert an array to a string</p>
+                        <pre><code>str = arr.join("-");
+console.log(str);</code></pre>
+                        <p>Output : "May-the-force-be-with-you"</p>
+                        <p><strong><code>for...of</code></strong></p>
+                        <p>It create a loop interating over iterable objects(strings and arrays)</p>
+                        <pre><code>for (variable of iterable) {
+statement
+}</code></pre>
+                        <p>Example:</p>
+                        <pre><code>let fruits_ary = ["apple", "pear", "mango", "banana"];
+for(fruit of fruits_ary) {
+    console.log(fruit);
+}</code></pre>
+                        <p><strong><code>Array.map()</code></strong></p>
+                        <p>It create a new array with the result of calling a provided function on every element in the calling array</p>
+                        <p>Example</p>
+                        <pre><code>let nums_ary = [20, 12, 7, 5, 22, 40, 72];
+let squares_ary = nums_ary.map(function(n){return n * n;});
+console.log(squares_ary);</code></pre>
+                        <p>Output : [400, 144, 49, 25, 484, 1600, 5184]</p>
+                        <p>Example with combination with arrow functions</p>
+                        <pre><code>let nums_ary = [20, 12, 7, 5, 22, 40, 72];
+let squares_ary = nums_ary.map(n => n * n);
+console.log(squares_ary);</code></pre>
+                        <p>Output : [400, 144, 49, 25, 484, 1600, 5184]</p>
+                        <p><strong><code>Array.filter()</code></strong></p>
+                        <p>It creates a new array with all the elements that pass the test implemented by the provided function</p>
+                        <pre><code>let fruits_ary = ["apple", "pear", "mango", "banana"];
+let new_ary = fruits_ary.filter(function(s){return s.length === 5;});
+console.log(new_ary);</code></pre>
+                        <p>Output : ["apple", "mango"]</p>
+                        <p>Example with combination with arrow function</p>
+                        <pre><code>let fruits_ary = ["apple", "pear", "mango", "banana"];
+let new_ary = fruits_ary.filter(s => s.length === 5);
+console.log(new_ary);</code></pre>
+                        <p>Output : ["apple", "mango"]</p>
+                        <p><strong><code>Array.reduce()</code></strong></p>
+                        <p>It applies a function against an accumulator and each element in the array from left to right to reduce it to a single value</p>
+                        <pre><code>let nums_ary = [20, 12, 7, 5, 22, 40, 72];
+    let sum = nums_ary.reduce(function(sum, val){return sum + val;});
+console.log(sum);</code></pre>
+                        <p>Output : 178</p>
+                        <p>Example with combination with arrow function</p>
+                        <p><code>let nums_ary = [20, 12, 7, 5, 22, 40, 72];</code></p>
+                        <p><code>let sum = nums_ary.reduce((sum, val) => sum + val);</code></p>
+                        <p><code>console.log(sum);</code></p>
+                        <p>178</p>
+                        <a href="#top">Go to top</a>
+                        <hr>
+                        <h3><a id="Lecture9.2"></a>Week 9 Session 2 - Lecture: Functions and scope</h3>
+                        <p><strong>Functions</strong></p>
+                        <p>A function is a code snippet that can be <b>called by other code or by itself</b>, or a variable that refers to the funtion</p>
+                        <p>When a function is called, argument can be passed into it as input and the function can retrun an output</p>
+                        <p>A function in JavaScript is also an object</p>
+                        <p>Function are one of the fundamental building blocks in JavaScript and most other programming languages</p>
+                        <ul>
+                            <li>Used to structure code</li>
+                            <li>Group a set of statements that perform a task. For example: Upload some thing to a server or calculatye a value</li>
+                            <li>Can take parameters or argument or value and return a value</li>
+                            <li>Can be named or anonymous</li>
+                            <li>Functions are objects. For example: they can be assigned to variables and passes as parameters to other functions</li>
+                        </ul>
+                        <p><strong>Defining Function</strong></p>
+                        <p>Function declaration, for named functions:</p>
+                        <pre><code>function name([param[, param[, ... param]]]) {
+    statements
+}</code></pre>
+                        <p>Example</p>
+                        <pre><code>function multiply(x, y) {
+    return x * y;
+}</code></pre>
+                        <p>Function expression, typically anonymous but can be named:</p>
+                        <pre><code>function [name]([param[, param[, ... param]]]) {
+    statements
+}</code></pre>
+                        <p>Example</p>
+                        <pre><code>let multiply = function(x, y) {
+    return x * y;
+};</code></pre>
+                        <p><strong>Named VS Anonymous</strong></p>
+                        <p><strong>Named</strong> function is use if we want to reuse it or to make the code more readable</p>
+                        <p><strong>Anonymous</strong> function is use when we don't want to reuse it or to make the code more compact</p>
+                        <p><strong>Parameters</strong></p>
+                        <p>Funtions can take a list of parameters</p>
+                        <p>JavaScript makes available an array-like object called arguments inside functions which contains actually passed parameters. This can be used to find out how many parameters were passed and access additional parameters were passed but not decalred</p>
+                        <p><strong>Return value</strong></p>
+                        <p>All functions has a return value</p>
+                        <p>The return statement is used to exit a function and return a value</p>
+                        <p>If a function has no return statement, it returns a special value underfined by default</p>
+                        <p><strong>Function Call Vs Function Reference</strong></p>
+                        <p>A function in JavaScript is an object - a function object to be precise</p>
+                        <ul>
+                            <li>To <strong>Call</strong> or execute a function, provide it with a possibly empty list of parameters enclosed in brackets() and get a value back in return</li>
+                        </ul>
+                        <p>Example:</p>
+                        <pre><code>let z = multiply(49,88);</code></pre>
+                        <pre><code>let order = ascending(20,12);</code></pre>
+                        <ul>
+                            <li>To <strong>Reference</strong> a function. only use its name without brackets or parameters</li>
+                        </ul>
+                        <p>Example:</p>
+                        <pre><code>let multi2 = multiply;
+let z = multi2(49,88);</code></pre>
+                        <pre><code>let nums = [20, 12, 7, 5, 72];
+nums.sort(ascending);</code></pre>
+                        <p><strong>Arrow functions</strong></p>
+                        <pre><code>// traditional function declaration
+function multi_1(x, y) {
+    return x * y;
+}
+// anonymous function assigned to variable
+let multi_2 = function(x, y) {
+    return x * y;
+}
+// arrow function (assigned to ES6 const)
+const multi_3 = (x, y) => x * y;
+console.log(multi_1(33, 66));
+console.log(multi_2(33, 66));
+console.log(multi_3(33, 66));</code></pre>
+                        <p><strong>Default Parameter Values</strong></p>
+                        <pre><code>// without default parameter values
+function multi_1(x, y) {
+    return x * y;
+}
+console.log(multi_1(7, 8)); // 56
+console.log(multi_1(7)); // NaN
+console.log(multi_1()); // NaN
+// with default parameter values
+function multi_2(x=0, y=1) {
+    return x * y;
+}
+console.log(multi_1(7, 8)); // 56
+console.log(multi_1(7)); // 7
+console.log(multi_1()); // 0</code></pre>
+                        <p><strong>Variable Parameter List</strong></p>
+                        <pre><code>// Example 1: build a full name
+function fullName(lastName, ...firstNames_ary) {
+let str = firstNames_ary.join(" ");
+    return str + " " + lastName;
+}
+console.log(fullName("Parker", "Dorothea", "Philippa", "Agatha"));
+// Example 2: sum up numbers
+function sum(...numbers_ary) {
+    return numbers_ary.reduce((sum, number) => sum + number);
+}
+console.log(sum(23, 49, 12, 34, 99, 6, 74));</code></pre>
+                        <p><strong>Variable Scope</strong></p>
+                        <p>The scope of a variable or function determines where it is accessible:</p>
+                        <ul>
+                            <li>Variable and functions decalred <b>outside a function</b> have a global scope and are accessible everywhere</li>
+                            <li>Variable and functions decalred <b>inside a function</b> have a local scope(function scope) and are accessible only wthin the function</li>
+                        </ul>
+                        <p>Technically, global variable and functions become properties and methods of <b>execution context</b>, which in a browser environment is the window object</p>
+                        <p>Best practice is to <b>avoid global variables and functions</b> as they pollute the global namespace and might conflict with other variables or methods and any third-party libraries we use</p>
+                        <p>There are serveral namespacing pattern in JavaScript, most of which use functions to limit the cope of variables and functions</p>
+                        <p>The most popular among there patterns is called Immediately Invoked Function Expressions(IIFEs) which encapsulates all code in an anonymous function which that is immediately executed</p>
+                        <p><strong>Let VS Var</strong></p>
+                        <p>Variables decalred with <code>var</code> have local or global scope and are <b>hoisted</b></p>
+                        <p>Variables decalred with <code>let</code> have block scoper and are <b>not hoisted</b></p>
+                        <pre><code>(function(){
+    console.log(i); // i is accessible due to hoisting but undefined
+    // console.log(j); // ReferenceError: j has block scope
+    // console.log(k); // ReferenceError: k is not hoisted, not yet declared
+    for(var i = 0; i < 3; i++) {
+       console.log(i);
+    }
+    for(let j = 0; j < 3; j++) {
+       console.log(j);
+    }
+    let k = 4;
+    console.log(i);
+    // console.log(j); // ReferenceError: j has block scope
+    console.log(k); // k is now accessible
+})();</code></pre>
+                        <a href="#top">Go to top</a>
+                    </header>
+                </div>
+                <p></p>
+                <div class="notes-contents">
+                    <header class="notes">
+                        <h3><a id="Lecture10.1"></a>Week 10 - Lecture: Document Object Model 1</h3>
+                        <p><strong>The Document Object Model (DOM)</strong></p>
+                        <p>DOM is an <b>application programming interface (APL)</b> for the HTML and XML document</p>
+                        <p>It enables us to <b>access, add, modify and delete page element</b> and their content and style with JavaScript</p>
+                        <p>It is a W3C standard and works on any standards-compliant browser</p>
+                        <p>The web has developed from a <strong>document-centric platform</strong> to an <strong>application-centric platform</strong></p>
+                        <p>When a web page is loaded, the browser creates a DOM of the page, which is an internal object oriented representation of an HTML document</p>
+                        <p>JavaScripy can then access the DOM to :</p>
+                        <ul>
+                            <li>Add, change and remove HTML elements and attributes in the page</li>
+                            <li>Change the CSS styles in the page</li>
+                            <li>React to the browser and user events in the page</li>
+                        </ul>
+                        <p>The DOM is a tree structure with a single root elemnt, which is the HTML tag enclosing a page</p>
+                        
+                        <p>In the DOM everything on a HTML page is a node :</p>
+                        <ul>
+                            <li>HTML elements, attributes and text content are all nodes</li>
+                            <li>These nodes can be accessed with JavaScript</li>
+                        </ul>
+                        <p>Nodes from a hierarchical tree:</p>
+                        <ul>
+                            <li>A single node at the top called root node</li>
+                            <li>All nodes except the rooy have a parent node</li>
+                            <li>Branch nodes have at least one child</li>
+                            <li>Leaf nodes do not have children</li>
+                            <li>Nodes on the same level with the same parent are siblings</li>
+                            <li></li>
+                        </ul>
+                        <p><strong>Accessing DOM Nodes</strong></p>
+                        <P>DOM elements are accessed through public methods of the global document object :</P>
+                        <p>New</p>
+                        <ul>
+                            <li><code>document.querySelector()</code></li>
+                            <li><code>document.querySelectorAll()</code></li>
+                        </ul>
+                        <p>Old</p>
+                        <ul>
+                            <li><code>document.getElementById()</code></li>
+                            <li><code>document.getElementsByTagName()</code></li>
+                            <li><code>document.getElementsByClassName()</code></li>
+                        </ul>
+                        <pre><code>document.getElementById()</code></pre>
+                        <p>Returns the <strong>single element</strong> with the spcified ID or null if not found</p>
+                        <pre><code>document.getElementsByTagName()</code></pre>
+                        <p>Returns a <strong>list of elements</strong> of the specified type ot an empty list if no element was found</p>
+                        <pre><code>document.getElementsByClassName()</code></pre>
+                        <P>Return a <strong>list of elements</strong> that have the spcifed class or an empty list if no element with that class was found</P>
+                        <pre><code>document.querySelector()</code></pre>
+                        <p>Returns a <strong>single the first mathcing specified CSS selector element</strong> or null if not found</p>
+                        <pre><code>document.querySelectorAll()</code></pre>
+                        <p>Returns a <strong>list of elements</strong> matching the specified CSS selector or an empty list if no element was found</p>
+                        <p><strong>Advantages</strong> of <code>querySelector</code> and <code>querySelectorAll</code></p>
+                        <ul>
+                            <li>Learn once use twice : Same selector rules as CSS</li>
+                            <li>More powerful : it can handle complex selectors that would be difficult to achieve with older methods</li>
+                        </ul>
+                        <p><strong>NOTE!!! CSS selectors</strong></p>
+                        <ul>
+                            <li><code>element</code> | E.g. <code>p</code> | Select all <code>p</code> elements</li>
+                            <li><code>#id</code> | E.g. <code>#list</code> | Select the element with the <code>id="list"</code></li>
+                            <li><code>.class</code> | E.g. <code>.book</code> | Selects all elements with the class="book"</li>
+                            <li><code>element, element</code> | E.g. <code>div, p</code> | Select all <code>div</code> and <code>p</code></li>
+                            <li><code>element element</code> | E.g. <code>div p</code> | Select all <code>p</code> elements that are descendants of <code>div</code> elements</li>
+                        </ul>
+                        <p><strong>More NOTE!!!</strong></p>
+                        <p><code>document.getElementById()</code> and <code>document.getElementsByClassName()</code> use simple ID and clas strings, <code>querySelector</code> and <code>querySelectorAll</code> follows the CSS syntax.</p>
+                        <p>Nodes from nodes</p>
+                        <p>Properties to access parent, sibling and child nodes:</p>
+                        <pre><code>node.parentNode</code></pre>
+                        <p>The parent node of node, which maybe null in the case of a newly created node or the root node</p>
+                        <pre><code>node.previousSibling</code></pre>
+                        <p>The sibling node directly before this node or node maybe null</p>
+                        <pre><code>node.nextSibling</code></pre>
+                        <p>The sibling node directly after this node or node maybe null</p>
+                        <pre><code>node.childNodes</code></pre>
+                        <p>A list or array of direct child nodes or node maybe empty</p>
+                        <pre><code>node.firstChild</code></pre>
+                        <p>The first child of the current nodes or node maybe null</p>
+                        <p><strong>Modifying DOM Nodes</strong></p>
+                        <p>Reading and modifying text content : Elements node have a property called textContent to read and modify their text content</p>
+                        <p>Reading and modifying attributes : Element nodes have methods to read and write attributes which can also be used tp create new attributes</p>
+                        <p><strong>Accssing the DOM</strong></p>
+                        <p>Only able to access the DOM after the page is fully loaded</p>
+                        <ul>
+                            <li>The broswer reads an HTML document sequentially line by line and builds up the DOM tree in the process</li>
+                            <li>When the browser encounters a <code>script</code> tag, it loads ans excutees the JavaScript code before continuing with the HTML</li>
+                            <li>That means the JavaScript might be excuted before the HTML is fully read and the DOM tree is fully built, trying to access elements that do not exist yet</li>
+                        </ul>
+                        <p>Method 1 : Use the load event</p>
+                        <p>This ensures that the code is only executed after the page has been fully loaded and the DOM is available</p>
+                        <p>Method 2 : Include scripts at the end of the HTML code</p>
+                        <ul>
+                            <li>Typically right before the closing html tag</li>
+                            <li>Popular for mobile development n=but not standardlise</li>
+                        </ul>
+                        <a href="#top">Go to top</a>
+                        <hr>
+                        <h3><a id="Lecture10.2"></a>Week 10 - Lecture: Document Object Model 2</h3>
+                        <p><strong>Events</strong></p>
+                        <p><strong>Event-driven programming</strong></p>
+                        <ol>
+                            <li>User interacts with page</li>
+                            <li>An event occurs</li>
+                            <li>A piece of JavaScript code runs in response</li>
+                            <li>The page's appearance is updated or modifies in some way as a result</li>
+                        </ol>
+                        <p>Small selection of events</p>
+                        
+                        <p><strong>Events</strong></p>
+                        <p>Events are the mechanism by which the browser notifies us of user interaction and its own operations</p>
+                        <p>E.g. <strong>click</strong> : user has clicked an element ; <strong>load</strong> : browser has finished loading an element</p>
+                        <p>Events always relate to a specific object, which can be a node in the DOM tree or the browser itslef</p>
+                        <p><strong>Event-driven programming</strong></p>
+                        <p>We can tell the browser which events we want to be notified of by registering an EventListener for each ogbject or event</p>
+                        <p>An EventListener is a JavaScript function that is called when that specific event fires: it an then react to the event, typically by manipulating the DOM</p>
+                        <p>Most often all of the JavaScript code is executed in response to event</p>
+                        <ul>
+                            <li><code>document.load</code> : page is fully loaded - accessing DOM elemts and register event listeners</li>
+                            <li><code>element.click</code> : react to click event</li>
+                        </ul>
+                        <p><strong>Registering an event lister</strong></p>
+                        <ul>
+                            <li>Seperate content and behaviour</li>
+                            <li>Enables multiple listeners to be registered</li>
+                        </ul>
+                        <p><strong>Event listeners are special</strong></p>
+                        <p>JavaScript treats event listeners differently from "normal" function in 2 ways :</p>
+                        <ol>
+                            <li>Inside an event listener, the kr=eyword this refers to the source of the event, the object where it occurred. Use this to get information about the element</li>
+                            <li>Event listeners are passed an event object with useful information and methods as their first parameter. Use the event object to get details about the event and prevent the default action</li>
+                        </ol>
+                        <p><strong>Keyword this in an event</strong></p>
+                        <p>Inside the event handler function, the keyword this refers to the HTML elemtn that caused the event</p>
+                        <p>We can use this to get more information about the element</p>
+                        <p><strong>Event object passed to event handler</strong></p>
+                        <p>When an event fires an event object is passed to the lister</p>
+                        <p>The event object provided information about the event and offers related functionality</p>
+                        <p>The event object parameter can be ignored if not needed</p>
+                        <a href="#top">Go to top</a>
+                    </header>
+                </div>
+                <p></p>
+                <div class="notes-contents">
+                    <header class="notes">
+                        <h3><a id="Lecture11.1"></a>Week 11 Sesson 1 - Lecture: Document Object Model 3</h3>
+                        <p><strong>Working with style</strong></p>
+                        <p><strong>2 style approaches</strong></p>
+                        <ol>
+                            <li>Modifying inline style</li>
+                            <li>Modifying CSS class list</li>
+                        </ol>
+                        <p><strong>Modifying inline style :</strong> <code>p id="p1" style="...", hello, /p</code></p>
+                        <p>Elements have a style property which can be used to read and set their inline CSS style. Since the style attribute has the highest priority in the CSS cascade, this will override any other styles defined for the element</p>
+                        <pre><code>document.querySelector("#p1").style.color = "red";</code></pre>
+                        <p>The style property allows us to manipulate the <strong>inline style</strong> attribute in HTML, not the CSS applied through stylesheets</p>
+                        <ul>
+                            <li>Since the style attribute has the higest priority in the CSS cascade this will override any other styles defined for the element</li>
+                            <li>We typically put all the styling into CSS files and try not to include style informayion in JavaScript</li>
+                            <li>However, for simple problems, it sometimes is easier and quicker to just modify the style attribute</li>
+                        </ul>
+                        <p>Basic syntax :</p>
+                        <p><code>element.style.property;</code>     // read inline style</p>
+                        <p><code>element.style.property = value;</code>     // set inline style</p>
+                        <p>Example :</p>
+                        <p>In HTML</p>
+                        <pre><code>p id="para", A piece of text..., /p</code></pre>
+                        <p>In JavaScript</p>
+                        <pre><code>let para = document.querySelector("#para");
+para.style.color = "#f00";
+para.style.fontWeight = "bold";</code></pre>
+                        <p>Inline style properties</p>
+                        <pre><code>background</code></pre>
+                        <pre><code>background-color</code></pre>
+                        <pre><code>background-image</code></pre>
+                        <pre><code>border</code></pre>
+                        <pre><code>border-color</code></pre>
+                        <pre><code>border-style</code></pre>
+                        <pre><code>color</pre></code>
+                        <pre><code>disply</code></pre>
+                        <pre><code>visibility</code></pre>
+                        <p><strong>Modifying CSS class list :</strong> <code>p id="p1" class"...", hello, /p</code></p>
+                        <p>Element have a classList property, which can be used to read and set classes, which in turn can be asscociated with certain CSS styles. This allows us to seperate styling from behaviour</p>
+                        <pre><code>document.querySelector("#p1").classList.add(".err");</code></pre>
+                        <p>The classList property allows us to manipulate classes of an HTML element</p>
+                        <ul>
+                            <li>Classes are styled in s<strong>CSS</strong>, seperating style and behaviour</li>
+                            <li>classList is supported in all mordern browser</li>
+                        </ul>
+                        <p>Basic Syntax</p>
+                        <img src="image/Week11Session1Image01.jpg" alt="image">
+                        <p>Example :</p>
+                        <p>In HTML</p>
+                        <pre><code>p id="para", A piece of text..., /p</code></pre>
+                        <p>In CSS</p>
+                        <pre><code>.quote { 
+color: #f00;
+font-weight: bold;
+}</code></pre>
+                        <p>In JavaScript</p>
+                        <pre><code>let para = document.querySelector("#para");
+para.classList.add("quote");</code></pre>
+                        <p><strong>Computed style</strong></p>
+                        <ul>
+                            <li>The style of element is determined by the CSS cascade: browser default >> stylesheets >> inline style</li>
+                            <li>The actual style of an element, after the CSS cascade is applied is called the <strong>computed style</strong></li>
+                            <li>We can request a <strong>read-only</strong> style object containing all style properties through <code>window.getComputedStyle()</code></li>
+                        </ul>
+                        <img src="image/Week11Session1Image02.jpg" alt="image">
+                        <p><strong>Creating and Deleting Elements</strong></p>
+                        <p><strong>Creating Elements Dynamically</strong></p>
+                        <p>There are 2 methods to create and insert HTML elements into the document object tree:</p>
+                        <ol>
+                            <li>Quick and dirty -- inefficient and insecure</li>
+                            <li>Recommended methods -- efficient and secure</li>
+                        </ol>
+                        <p>Recommended methods :</p>
+                        <ul>
+                            <li><code>createElement(tagname)</code></li>
+                            <li><code>createTextNode(text)</code></li>
+                            <li><code>appendChild(element)</code></li>
+                            <li><code>removeChild(element)</code></li>
+                        </ul>
+                        <p><strong>innerHTML</strong></p>
+                        <p>Inefficient about innerHTML</p>
+                        <ul>
+                            <li>Get an instance of the DOM parser</li>
+                            <li>Parse the string as HTML code</li>
+                            <li>Create HTML element</li>
+                            <li>Append HTML elements to each other</li>
+                            <li>Append to the target element</li>
+                        </ul>
+                        <p>Insecure about innerHTML</p>
+                        <ul>
+                            <li>When parsing the string with HTML code, the browser can be tricked into executing code</li>
+                            <li>If the string comes from user input or from an external API, this opens us up to attacks</li>
+                        </ul>
+                        <p><strong>API methods</strong></p>
+                        <p>In HTML</p>
+                        <pre><code>div id="target", /div</code></pre>
+                        <p>In JavaScript</p>
+                        <pre><code>let target = document.querySelector("#target");</code></pre>
+                        <p>Pattern</p>
+                        <p>create : <code>let p = document.createElement("p");</code></p>
+                        <p>[set text] : <code>p.textContent = "web development";</code></p>
+                        <p>[set attribute] : <code>p.setAttribute("class", "web");</code></p>
+                        <p>append : <code>target.appendChild(p);</code></p>
+                        <p><strong>Removing nodes</strong></p>
+                        <p><code>removeChild()</code> : Removes a child node from a parent node</p>
+                        <p>In HTML</p>
+                        <pre><code>div id="parent"
+p id="child1", /p
+p id="child2", /p
+/div</code></pre>
+                        <p>In JavaScript</p>
+                        <p>Solution 1</p>
+                        <pre><code>let p = document.querySelector("#parent");
+let c = document.querySelector("#child2");
+p.removeChild(c);</code></pre>
+                        <p>Solution 2</p>
+                        <pre><code>let c = document.querySelector("#child2");
+c.parentNode.removeChild(c);</code></pre>
+                        <p>Removing all the child nodes</p>
+                        <pre><code>let p = document.querySelector("#parent");
+while(p.lastChild) {
+p.removeChild(p.lastChild);
+}</code></pre>
+                        <a href="#top">Go to top</a>
+                        <hr>
+                        <h3><a id="Lecture11.2"></a>Week 11 - Lecture: Working with forms</h3>
+                        <p><strong>Form processing 101</strong></p>
+                        <ol>
+                            <li>User interacts with a form by entering data</li>
+                            <li>Extract data when appropriate</li>
+                            <li>Validate Data, if fail : Report the reason to the user ; if Pass : Process Data</li>
+                            <li>Process Data and report result to the user</li>
+                        </ol>
+                        <p><strong>Accessing form elements</strong></p>
+                        <p>Recommended :D</p>
+                        <ul>
+                            <li>Through an ID</li>
+                        </ul>
+                        <p>NOT Recommended :C</p>
+                        <ul>
+                            <li>Through forms / elements collections</li>
+                            <li>Through document properties</li>
+                            <li>Any mixture between them</li>
+                        </ul>
+                        <p><strong>Text* input</strong></p>
+                        <p>For simple text <code>input</code> : text, email, password, etc... and <code>textArea</code> elements we use the <strong>value</strong> property</p>
+                        <p>In HTML</p>
+                        <pre><code>form id="frm"
+label for="username", Username:, /label
+input type="text" id="username" /
+/form</code></pre>
+                        <p>In JavaScript</p>
+                        <pre><code>var username = document.querySelector("#username").value;
+var username = document.querySelector("#username").value.trim();</code></pre>
+                        <p><strong>Select / Option</strong></p>
+                        <p>For <code>select</code>, we use <strong>selectedIndex</strong> and the <strong>value</strong> property</p>
+                        <p>In HTML</p>
+                        <pre><code>form id="frmcourse"
+    label for="course", Select a course:, /label
+    select id="course"
+        option value="DMD", Digital Media Development, /option
+        option value="CSG", Computer Science Games, /option
+        option value="BIS", Business Information Systems, /option   
+    /select                         
+/form</code></pre>
+                        <p>In JavaScript</p>
+                        <pre>var course = document.querySelector("#course");<code>
+var selected = course.options[course.selectedIndex].value;</code></pre>
+                        <p><strong>Checkboxes</strong></p>
+                        <p>For <code>checkbox</code> elements, we use <strong>checked</strong> and the <strong>value</strong></p>
+                        <p>In HTML</p>
+                        <pre><code>form id="fruits"
+    fieldset
+        legend, Select one or more:, /legend
+        input type="checkbox" id="c1" value="apple"
+        label for="c1", Apple, /label
+        input type="checkbox" id="c2" value="orange"
+        label for="c2", Orange, /label
+        input type="checkbox" id="c3" value="banana"
+        label for="c3", Banana, /label
+    /fieldset 
+/form</code></pre>
+                        <p>In JavaScript</p>
+                        <pre><code>var i, fruits = [], elems = document.querySelectorAll("#fruits input");
+    for(i = 0; i < elems.length; i++) {
+        if(elems[i].checked) {
+            fruits.push(elems[i].value);
+        }   
+}                     
+console.log(fruits);</code></pre>
+                        <p><strong>Radio buttons</strong></p>
+                        <p>For <code>radio</code> elements, we use checked and value</p>
+                        <p>In HTML</p>
+                        <pre><code>form id="fruits"
+    fieldset
+        legend, Favourite fruit:, /legend
+        input type="radio" id="r1" value="apple"
+        label for="r1", Apple, /label
+        input type="radio" id="r2" value="orange"
+        label for="r2", Orange, /label
+        input type="radio" id="r3" value="banana"
+        label for="r3", Banana, /label
+    /fieldset
+/form</code></pre>
+                        <p>In JavaScript</p>
+                        <pre><code>var i, fruit, elems = document.querySelectorAll("#fruits input");
+for(i = 0; i < elems.length; i++) {
+    if(elems[i].checked) {
+        fruit = elems[i].value;
+        console.log(fruit);
+        break;
+    }
+}</code></pre>
+                        <p><strong>Data Validation</strong></p>
+                        <p>The need of Validate data as it ensures that :</p>
+                        <ul>
+                            <li>All required field are filled in</li>
+                            <li>Entered values is plausible</li>
+                            <li>Entered data is not harmful or malicious</li>
+                        </ul>
+                        <p>When we collect data from users in free text form, we are vulnerable to cross-site scripting (XSS), SQL injection and other forms of attack</p>
+                        
+                        <p><strong>Selecting an event</strong></p>
+                        <p>We can use different events for form validation</p>
+                        <ul>
+                            <li><code>keyup</code> event of text input elements : visualise password strength or to provide searchb tern suggestions</li>
+                            <li><code>blur</code> event of text input elements : check if an email address  or telephone number is valid</li>
+                            <li><code>change</code> eent of checkbox, radio, select elements : enable or diable elements when an option is selected or deselected</li>
+                            <li><code>click</code> event of button element : to look up an address based on a post code</li>
+                            <li><code>submit</code> event of the form : use this for actual form submission after all other checks and ensures that user can submit form with ENTER or RETURN key</li>
+                        </ul>
+                        <a href="#top">Go to top</a>
+                    </header>
+                </div>
+                <p></p>
+                <div class="notes-contents">
+                    <header class="notes">
+                        <h3><a id="Lecture12"></a>Week 12 - Lecture: Exam and Revision</h3>
+                        <p><strong>Revision</strong></p>
+                        <p><strong>Backgroud of JavaScript</strong></p>
+                        <ul>
+                            <li>Created in 1995 by <strong>Brendan Eich</strong> with in only 10 DAYS</li>
+                            <li>It was standardlise by ECMA during 1996 - 1997</li>
+                        </ul>
+                        <p><strong>About it</strong></p>
+                        <ul>
+                            <li>A lightweight scripting language</li>
+                            <li>Was originally designed to add interactivity to HTML pages. For example: HTML -> content; CSS -> presentation; JavaScript -> behaviour</li>
+                            <li>Declarative VS Procedural</li>
+                            <li>Complied VS Interpreted</li>
+                            <li>Strongly types VS weakly typed</li>
+                        </ul>
+                        <p><strong>JavaScript Language (Session 2 - Session 6)</strong></p>
+                        <ul>
+                            <li>Statements</li>
+                            <li>Variables</li>
+                            <li>Data Types</li>
+                            <li>Operators</li>
+                            <li>Expressions</li>
+                            <li>Control structures</li>
+                            <li>Strings</li>
+                            <li>Arrays</li>
+                            <li>Function</li>
+                            <li>Scope</li>
+                        </ul>
+                        <p><strong>Manipulating Pages (Session 7 - Session 10)</strong></p>
+                        <ul>
+                            <li>Document Object Model</li>
+                            <li>Structure and Node Types</li>
+                            <li>Accessing Elements</li>
+                            <li>Accessing Attributes</li>
+                            <li>Event-driven Programming</li>
+                            <li>Event Handlers</li>
+                            <li>Creating Elements</li>
+                            <li>Styling Elements</li>
+                            <li>Reading form Values</li>
+                            <li>Validating form values</li>
+                        </ul>
+                        <a href="#top">Go to top</a>
+                    </header>
+                </div>
+                
+            </article>
+            
+
+        </main><!--Close main page content -->
+
+        <aside>
+
+        </aside>
+
+
+        <footer>
+            <!--Footer content -->
+            <p><a href="#top">Go to top</a></p>
+            <p><a href="K.Ching1@uni.brighton.ac.uk">Email Website design and developer: Kary Ching</a></p>
+            <small>&copy; 2025, Kary C.</small>
+        </footer>
+
+    </div><!--Close 'wrappers' div -->
+</body><!--Close 'body' -->
+</html><!--Close 'html' -->

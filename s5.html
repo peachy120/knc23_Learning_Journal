@@ -1,0 +1,134 @@
+﻿
+
+<!doctype html>
+<!--HTML5 doctype declaration -->
+<html lang="en">
+<!--default language of the document content -->
+
+<head>
+    <meta charset="utf-8"><!--character encoding for the document (Unicode) -->
+    <title>Kary's Learning Journal</title><!--web page title -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/stylesheet.css" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Strait" rel="stylesheet">
+    <script src="script/s5.js"></script>
+</head>
+
+<body>
+    <a id="top"></a>
+    <!--Markup all web page content inside the 'body' tags -->
+    <div id="wrappers">
+        <!--The 'wrapper' contains all the page content-->
+
+        <header class="banner">
+            <!--The main heading for the page -->
+            <h1>Java Script Lab Session 5</h1>
+            <h2>Working with Arrays</h2>
+        </header>
+
+        <nav class="menu">
+            <!--The primary navigation for the page -->
+            <ul>
+                <li><a href="index.html">Learning Journal</a></li>
+                <li><a href="tutorial.html">Tutorial</a></li>
+                <li><a href="lectureNotes.html">Lecture Notes</a></li>
+                <li><a href="jscriptlabs.html">Lab work</a></li>
+                <li><a href="contact.html">Contact me</a></li>
+                <li><a href="question.html">Possible Questions</a></li>
+                <li><a href="definition.html">Definition</a></li>
+            </ul>
+        </nav>
+
+        <nav>
+            <p>Lab Excerise</p>
+            <ol>
+                <li>Questions</li>
+                <li><a href="s2.html">Statement, Variables, Data Type</a></li>
+                <li><a href="s3.html">Control Structures</a></li>
+                <li><a href="s4.html">Working with Strings</a></li>
+                <li><a href="s5.html">Working with Arrays</a></li>
+                <li><a href="s6.html">Functions</a></li>
+                <li><a href="s7.html">DOM 1 - Introduce, Accessing Elements and Attributes</a></li>
+                <li><a href="s8.html">DOM 2 - Events, Listeners, Manipulating Elements</a></li>
+                <li><a href="s9.html">DOM 3 - Creating and Deleting Elements</a></li>
+                <li><a href="s10.html">Working with Forms</a></li>
+            </ol>
+        </nav>
+
+        <main>
+            <article>
+                <div class="notes-contents">
+                    <header class="notes">
+                        <h3>Session 5 Tutorial Questions</h3>
+                        <p>2. Declare an array with friend names, e.g.let friends = ["Benjamin", "Lily", "Emily", " Gabriel"];</p>
+                        <p><strong>Answers :</strong></p>
+                        <pre><code>let friends = ["Benjamin", "Lily", "Emily", "Gabriel"];</code></pre>
+                        <p>a. Add two new friends to the array called Isabella and Charlotte.</p>
+                        <p><strong>Answers :</strong></p>
+                        <pre><code>friends.push("Isabella", "Charlotte");
+console.log("Updated : ", friends);
+</code></pre>
+                        <p>b. Change the last element in the array to Miles</p>
+                        <p><strong>Answers :</strong></p>
+                        <pre><code>friends[friends.length - 1] = 'Miles';
+console.log("Updated : ", friends);</code></pre>
+                        <p>c. Using the splice() method, replace the second and third friends in the array with a single new friend Aria</p>
+                        <p><strong>Answers :</strong></p>
+                        <pre><code>friends.splice(1, 2, 'Aria');
+console.log("Updated : ", friends);</code></pre>
+                        <p>d. Using the pop() method, remove the last element of the array and then insert it at index 0 using the unshift() method</p>
+                        <p><strong>Answers :</strong></p>
+                        <pre><code>let lastOfTheList = friends.pop();
+friends.unshift(lastOfTheList);
+console.log("Updated : ", friends);</code></pre>
+                        <p>e. Reverse the process by using the shift() method to remove the first element of the array and the push() method to add it at the end of the array</p>
+                        <p><strong>Answers :</strong></p>
+                        <pre><code>let firstOfTheList = friends.shift();
+friends.push(firstOfTheList);
+console.log("Updated : ", friends);</code></pre>
+                        <p>f. Using the indexOf() method, find the index of the name Aria in the array</p>
+                        <p><strong>Answers :</strong></p>
+                        <pre><code>let indexAria = friends.indexOf('Aria');
+console.log("Index of 'Aria' : ", friends);</code></pre>
+                        <p>g. Using the indexOf() method, log true to the console if the array contains the name Bob or false otherwise. Try doing this in a single statement.</p>
+                        <p><strong>Answers :</strong></p>
+                        <pre><code>console.log(friends.indexOf('Bob') !== -1);</code></pre>
+                        <p>h. Using the sort() method, sort the array in ascending alphabetical order</p>
+                        <p><strong>Answers :</strong></p>
+                        <pre><code>friends.sort();
+console.log("Sorted : ", friends);</code></pre>
+                        <p>i. Using the join() method, create a string of all names separated by a comma space (", ")</p>
+                        <p><strong>Answers :</strong></p>
+                        <pre><code>let nameStr = friends.join(", ");
+console.log("Updated : ", nameStr);</code></pre>
+                        <hr>
+                        <p>3. Declare a new variable count, then loop over the array friends and add the length of each name to the count variable. Log to the console the total number of characters in all names and the average numbers of characters per name.</p>
+                        <p><strong>Answers :</strong></p>
+                        <pre><code>let count = 0;
+for (let i = 0; i < friends.length; i++) {
+    count = count + friends[i].trim().length;
+}
+let average = count / friends.length;
+console.log("Total character of friend : ", count);
+console.log("Average characters per name : ", average.toFixed(2));</code></pre>
+                        <a href="#top">Go to top</a>
+                    </header>
+                </div>
+            </article>
+        </main><!--Close main page content -->
+
+        <aside>
+        </aside>
+
+
+        <footer>
+            <!--Footer content -->
+            <p><a href="#top">Go to top</a></p>
+            <p><a href="K.Ching1@uni.brighton.ac.uk">Email Website design and developer: Kary Ching</a></p>
+            <small>&copy; 2025, Kary C.</small>
+        </footer>
+
+    </div><!--Close 'wrapper' div -->
+</body><!--Close 'body' -->
+</html><!--Close 'html' -->

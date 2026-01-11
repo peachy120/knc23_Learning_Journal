@@ -1,0 +1,200 @@
+
+<!doctype html>
+<!--HTML5 doctype declaration -->
+<html lang="en">
+<!--default language of the document content -->
+
+<head>
+    <meta charset="utf-8"><!--character encoding for the document (Unicode) -->
+    <title>Kary's Learning Journal</title><!--web page title -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/stylesheet.css" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Strait" rel="stylesheet">
+    <script src="script/s8.js"></script>
+</head>
+
+<body>
+    <!--Markup all web page content inside the 'body' tags -->
+    <div id="wrappers">
+        <!--The 'wrapper' contains all the page content-->
+
+        <header class="banner">
+            <!--The main heading for the page -->
+            <h1>Java Script Lab Session 8</h1>
+            <h2>DOM 2 - Events, Listeners, Manipulating Elements</h2>
+        </header>
+
+        <nav class="menu">
+            <!--The primary navigation for the page -->
+            <ul>
+                <li><a href="index.html">Learning Journal</a></li>
+                <li><a href="tutorial.html">Tutorial</a></li>
+                <li><a href="lectureNotes.html">Lecture Notes</a></li>
+                <li><a href="jscriptlabs.html">Lab work</a></li>
+                <li><a href="contact.html">Contact me</a></li>
+                <li><a href="question.html">Possible Questions</a></li>
+                <li><a href="definition.html">Definition</a></li>
+            </ul>
+        </nav>
+
+        <nav>
+            <p>Lab Excerise</p>
+            <ol>
+                <li>Questions</li>
+                <li><a href="s2.html">Statement, Variables, Data Type</a></li>
+                <li><a href="s3.html">Control Structures</a></li>
+                <li><a href="s4.html">Working with Strings</a></li>
+                <li><a href="s5.html">Working with Arrays</a></li>
+                <li><a href="s6.html">Functions</a></li>
+                <li><a href="s7.html">DOM 1 - Introduce, Accessing Elements and Attributes</a></li>
+                <li><a href="s8.html">DOM 2 - Events, Listeners, Manipulating Elements</a></li>
+                <li><a href="s9.html">DOM 3 - Creating and Deleting Elements</a></li>
+                <li><a href="s10.html">Working with Forms</a></li>
+            </ol>
+        </nav>
+
+        <main>
+        <h2>Question 2</h2>
+        <p>Attach an initial load event listener to the window object, which hosts all the code to set up further event listeners on document elements once the DOM is fully loaded. If you are unsure how to do this, look at the JavaScript code from the previous tutorial.</p>
+
+        <h2>Question 3</h2>
+        <p>Attach a click event listener to the button with id btn3. The event listener should log the text "Clicked" to the console.</p>
+        <button id="btn3">Log me</button>
+
+        <h2>Question 4</h2>
+        <p>Attach a click event listener to the button with id btn4. The event listener should get the paragraph with id p4, log its current text to the console, and replace it with "Success".</p>
+        <p id="p4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam rhoncus ultricies purus id laoreet. Nulla nulla nisi, venenatis vitae massa ut, lacinia sollicitudin est. Cras feugiat enim in ipsum pulvinar luctus. Integer auctor est elit, ut volutpat eros ullamcorper at. Curabitur quam lectus, semper sit amet magna eu, sollicitudin faucibus massa. In hac habitasse platea dictumst. Cras felis lectus, posuere in libero non, egestas hendrerit sem. In vitae lacinia elit.</p>
+        <button id="btn4">Make it a success</button>
+
+        <h2>Question 5</h2>
+        <p>Attach a click event listener to the button with the id btn5. This event listener should get all paragraph &lt;p&gt; elements and log their text to the console</p>
+        <button id="btn5">Log text from all paragraphs</button>
+
+        <h2>Question 6</h2>
+        <p>Investigate mouse events (e.g. mousedown, mouseup, mousemove, click, etc.) by registering a listener for each event on the div with id div6. The listeners should log event properties to the console including the event type and the mouse position. To complete this question, first research MouseEvent and general Event properties at <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent">https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent</a> and <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Event">https://developer.mozilla.org/en-US/docs/Web/API/Event</a>.</p>
+        <div id="div6">Listen to mouse events</div>
+
+        <h2>Question 7</h2>
+        <p>Attach a click listener to the anchor element with id a7, which logs the link target (href attribute) to the console. The listener should prevent the default action of the anchor.</p>
+        <a id="a7" href="http://www.brighton.ac.uk">Click this link</a>
+        
+        <h2>Question 8</h2>
+        <p>Attach a click event listener to all table cell <td> elements, which replaces the current cell text with "Success" when clicked</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Heading 1</th>
+                    <th>Heading 2</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Cell 1</td>
+                    <td>Cell 2</td>
+                </tr>
+                <tr>
+                    <td>Cell 1</td>
+                    <td>Cell 2</td>
+                </tr>
+                <tr>
+                    <td>Cell 1</td>
+                    <td>Cell 2</td>
+                </tr>
+                <tr>
+                    <td>Cell 1</td>
+                    <td>Cell 2</td>
+                </tr>
+                <tr>
+                    <td>Cell 1</td>
+                    <td>Cell 2</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <article>
+            <div class="notes-contents">
+                <header class="notes">
+                    <h3>Session 7 Tutorial Questions</h3>
+                    <p>2. Attach an initial load event listener to the window object, which hosts all the code to set up further event listeners on document elements once the DOM is fully loaded. If you are unsure how to do this, look at the JavaScript code from the previous tutorial.</p>
+                    <p><strong>Answers :</strong></p>
+                    <pre><code>window.addEventListener("load", function() {</code></pre>
+                    <hr>
+                    <p>3. Attach a click event listener to the button with id btn3. The event listener should log the text "Clicked" to the console.</p>
+                    <p><strong>Answers :</strong></p>
+                    <pre><code>var button3 = document.querySelector("#btn3");
+button3.addEventListener("click", action3);
+
+function action3() {
+    console.log("button was clicked");
+}</code></pre>
+                    <hr>
+                    <p>4. Attach a click event listener to the button with id btn4. The event listener should get the paragraph with id p4, log its current text to the console, and replace it with "Success".</p>
+                    <p><strong>Answers :</strong></p>
+                    <pre><code>var button4 = document.querySelector("#btn4");
+var idp4 = document.querySelectorAll("#p4");
+button4.addEventListener("click", action4);
+
+function action4() {
+    console.log(p4.textContent);
+    p4.textContent = "Success";
+}</code></pre>
+                    <hr>
+                    <p>5. Attach a click event listener to the button with the id btn5. This event listener should get all paragraph <p> elements and log their text to the console.</p>
+                    <p><strong>Answers :</strong></p>
+                    <pre><code>var button5 = document.querySelector("#btn5");
+var pElement = document.querySelectorAll("p");
+button5.addEventListener("click", action5)
+
+function action5() {
+    console.log(p.textContent);
+    console.log(package.textContent);
+}</code></pre>
+                    <hr>
+                    <p>6. Investigate mouse events (e.g. mousedown, mouseup, mousemove, click, etc.) by registering a listener for each event on the div with id div6. The listeners should log event properties to the console including the event type and the mouse position.</p>
+                    <p>HINT: To complete this question, first research MouseEvent and general Event properties at https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent and https://developer.mozilla.org/en-US/docs/Web/API/Event</p>
+                    <p><strong>Answers :</strong></p>
+                    <pre><code>let event = ["mousedown", "mouseup", "mousemove", "click"];
+
+var event6 = document.querySelector("#div6");
+for ( i = 0; i < event6.length; i++ ) {
+    console.log(event6[i] + event6[i].textContent);
+}</code></pre>
+                    <hr>
+                    <p>7. Attach a click listener to the anchor element with id a7, which logs the link target (href attribute) to the console. The listener should prevent the default action of the anchor.</p>
+                    <p><strong>Answers :</strong></p>
+                    <pre><code>var button7 = document.querySelector("#a7");
+button7.addEventListener("click", function (event6) {
+    event6.preventDefault();
+    console.log(this.getAttribute("href"));
+});</code></pre>
+                    <hr>
+                    <p>8. Attach a click event listener to all table cell <td> elements, which replaces the current cell text with "Success" when clicked.</p>
+                    <p><strong>Answers :</strong></p>
+                    <pre><code>var button8 = document.querySelectorAll("td");
+button8.forEach( td => {td.addEventListener("click", function() {
+    this.textContent = "Success";
+})})
+
+});</code></pre>
+                    <a href="#top">Go to top</a>
+                </header>
+            </div>
+        </article>
+        
+        </main><!--Close main page content -->
+
+        <aside>
+        </aside>
+
+
+        <footer>
+            <!--Footer content -->
+            <p><a href="#top">Go to top</a></p>
+            <p><a href="K.Ching1@uni.brighton.ac.uk">Email Website design and developer: Kary Ching</a></p>
+            <small>&copy; 2025, Kary C.</small>
+        </footer>
+
+    </div><!--Close 'wrapper' div -->
+</body><!--Close 'body' -->
+</html><!--Close 'html' -->

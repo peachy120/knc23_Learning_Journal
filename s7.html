@@ -1,0 +1,196 @@
+
+
+<!doctype html>
+<!--HTML5 doctype declaration -->
+<html lang="en">
+<!--default language of the document content -->
+
+<head>
+    <meta charset="utf-8"><!--character encoding for the document (Unicode) -->
+    <title>Kary's Learning Journal</title><!--web page title -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/stylesheet.css" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Strait" rel="stylesheet">
+    <script src="script/s7.js"></script>
+</head>
+
+<body>
+    <a id="top"></a>
+    <!--Markup all web page content inside the 'body' tags -->
+    <div id="wrappers">
+        <!--The 'wrapper' contains all the page content-->
+
+        <header class="banner">
+            <!--The main heading for the page -->
+            <h1>Java Script Lab Session 7</h1>
+            <h2>DOM 1 - Introduce, Accessing Elements and Attributes</h2>
+        </header>
+
+
+        <nav class="menu">
+            <!--The primary navigation for the page -->
+            <ul>
+                <li><a href="index.html">Learning Journal</a></li>
+                <li><a href="tutorial.html">Tutorial</a></li>
+                <li><a href="lectureNotes.html">Lecture Notes</a></li>
+                <li><a href="jscriptlabs.html">Lab work</a></li>
+                <li><a href="contact.html">Contact me</a></li>
+                <li><a href="question.html">Possible Questions</a></li>
+                <li><a href="definition.html">Definition</a></li>
+            </ul>
+        </nav>
+
+        <nav>
+            <p>Lab Excerise</p>
+            <ol>
+                <li>Questions</li>
+                <li><a href="s2.html">Statement, Variables, Data Type</a></li>
+                <li><a href="s3.html">Control Structures</a></li>
+                <li><a href="s4.html">Working with Strings</a></li>
+                <li><a href="s5.html">Working with Arrays</a></li>
+                <li><a href="s6.html">Functions</a></li>
+                <li><a href="s7.html">DOM 1 - Introduce, Accessing Elements and Attributes</a></li>
+                <li><a href="s8.html">DOM 2 - Events, Listeners, Manipulating Elements</a></li>
+                <li><a href="s9.html">DOM 3 - Creating and Deleting Elements</a></li>
+                <li><a href="s10.html">Working with Forms</a></li>
+            </ol>
+        </nav>
+
+        <main>
+            <p id="elem1" class="highlight">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam rhoncus ultricies purus id laoreet. Nulla nulla nisi, venenatis vitae massa ut, lacinia sollicitudin est. Cras feugiat enim in ipsum pulvinar luctus. Integer auctor est elit, ut volutpat eros ullamcorper at. Curabitur quam lectus, semper sit amet magna eu, sollicitudin faucibus massa. In hac habitasse platea dictumst. Cras felis lectus, posuere in libero non, egestas hendrerit sem. In vitae lacinia elit.</p>
+
+            <ol id="first">
+                <li class="highlight">Item</li>
+                <li class="highlight">Item</li>
+                <li>Item</li>
+                <li>Item</li>
+                <li class="highlight">Item</li>
+                <li>Item</li>
+                <li class="highlight">Item</li>
+                <li>Item</li>
+                <li class="highlight">Item</li>
+                <li>Item</li>
+            </ol>
+
+            <p class="highlight">Fusce mattis felis tellus. Nam id augue orci. In hac habitasse platea dictumst. Ut metus justo, blandit id ultrices a, molestie id enim. Nullam sed congue sapien, fringilla bibendum urna. Aenean vel interdum elit. Donec ultricies eros at interdum porttitor. Nulla ac urna sit amet odio ultricies faucibus vitae eu justo. Aliquam sollicitudin, leo vel pharetra blandit, erat lorem tincidunt enim, in dapibus felis risus quis ex. Nulla a convallis lorem. Ut scelerisque placerat felis. Curabitur feugiat ante tortor, a accumsan orci commodo vel. In porta congue nisi sed bibendum.</p>
+            <p>Nulla dictum purus vel tortor egestas, sit amet aliquam libero dictum. Nam cursus mi a velit facilisis, ut rutrum dolor dapibus. Donec nunc lacus, sagittis sed elit a, laoreet tempor leo. Mauris at mi ut tortor dapibus porttitor. Proin pulvinar lorem et erat fringilla molestie. Integer suscipit sagittis laoreet. Nunc aliquet risus sem, euismod iaculis quam iaculis sit amet.</p>
+            <p>Suspendisse efficitur lectus quis sem tempus tincidunt. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc sapien lorem, bibendum id ultrices ut, fringilla eu felis. Fusce tincidunt eros nibh, nec posuere dolor ultrices a. Pellentesque ac feugiat tortor. Maecenas fringilla faucibus mauris, in luctus turpis faucibus in. Vestibulum faucibus ac eros non dictum. In hac habitasse platea dictumst.</p>
+
+            <ul id="second">
+                <li>Item</li>
+                <li class="highlight">Item</li>
+                <li class="highlight">Item</li>
+                <li>Item</li>
+                <li>Item</li>
+                <li>Item</li>
+                <li class="highlight">Item</li>
+                <li class="highlight">Item</li>
+                <li class="highlight">Item</li>
+                <li>Item</li>
+            </ul>
+
+            <p>Quisque id nisi quis erat venenatis sodales. Vestibulum in aliquet lacus. Cras mattis ipsum id tortor tincidunt mattis. In finibus, nibh id gravida vulputate, sapien ex cursus dolor, quis auctor enim ante at orci. Nulla iaculis eget tellus a accumsan. Duis at turpis vel mi aliquam placerat et quis enim. Curabitur viverra turpis ut lectus interdum, non ornare eros lacinia. Cras urna dolor, posuere ac rutrum non, fringilla sed erat. Proin ultricies rutrum mauris, eget tincidunt nunc consequat non.</p>
+
+            <article>
+                <div class="notes-contents">
+                    <header class="notes">
+                        <h3>Session 7 Tutorial Questions</h3>
+                        <p>2. Select the element with the id elem1 and log its content to the console. Do this twice, first using querySelector() then using getElementById(). Notice the difference in specifying the element ID in these two versions.</p>
+                        <p><strong>Answers :</strong></p>
+                        <pre><code>var a = document.querySelector("#elem1");
+console.log(a.textContent);</code></pre>
+                        <p></p>
+                        <pre><code>var b = document.getElementById("elem1");
+console.log(b.textContent);</code></pre>
+                        <hr>
+                        <p>3. Practice your selector skills: Select the following elements then (a) loop over them and log to the console their content, and (b) log to the console the number of elements:</p>
+                        <p>a. all paragraph <code>p</code> elements</p>
+                        <p><strong>Answers :</strong></p>
+                        <pre><code>var c = document.getElementsByTagName("p");
+for(var i = 0; i < c.length; i++) {
+    console.log(c[i].textContent);
+}</code></pre>
+                        <p></p>
+                        <pre><code>var d = document.querySelectorAll("p");
+for(var i = 0; i < d.length; i++) {
+    console.log(d[i].textContent);
+}</code></pre>
+                        <p>b. all elements with the class highlight</p>
+                        <p><strong>Answers :</strong></p>
+                        <pre><code>var e = document.getElementsByClassName("highlight");
+for(var i = 0; i < e.length; i++) {
+    console.log(e[i].textContent);
+}</code></pre>
+                        <p></p>
+                        <pre><code>var f = document.querySelectorAll(".highlight");
+for(var i = 0; i < f.length; i++) {
+    console.log(f[i].textContent);
+}</code></pre>
+                        <p>c. all list item <code>li</code> elements in the list with id first</p>
+                        <p><strong>Answers :</strong></p>
+                        <pre><code>var g = document.querySelectorAll("#first li");
+for(var i = 0; i < g.length; i++) {
+    console.log(g[i].textContent);
+}</code></pre>
+                        <p>d. all list item <code>li</code> elements with the class highlight</p>
+                        <p><strong>Answers :</strong></p>
+                        <pre><code>var h = document.querySelectorAll("li.highlight");
+for(var i = 0; i < h.length; i++) {
+    console.log(h[i].textContent);
+}</code></pre>
+                        <p>e. all list item <code>li</code> elements and all paragraph <code>p</code> elements with the class highlight</p>
+                        <p><strong>Answers :</strong></p>
+                        <pre><code>var k = document.querySelectorAll("li.highlight, p.highlight");
+for(var i = 0; i < k.length; i++) {
+    console.log(k[i].textContent);
+}</code></pre>
+                        <hr>
+                        <p>4. What are the advantages of querySelector() and querySelectorAll() over older methods like getElementById(), getElementsByClassName() and getElementsByTagName()?</p>
+                        <p><strong>Answers :</strong></p>
+                        <pre><code></code></pre>
+                        <hr>
+                        <p>5. querySelector() and querySelectorAll() are available for the document object as well as for DOM nodes. To test this, first select the <code>ul</code> element, then use querySelectorAll() on it to select all child nodes of class highlight. Log their number to the console.</p>
+                        <p><strong>Answers :</strong></p>
+                        <pre><code>var l = document.querySelector("ul")
+var m = l.querySelectorAll(".highlight");
+console.log(m.length);</code></pre>
+                        <hr>
+                        <p>6. The DOM provides node properties to access parent, sibling and child nodes. To test this, select the element with id first and then log to the console:</p>
+                        <pre><code>var n = document.querySelector("#first");</code></pre>
+                        <p>a. the node type, node name and text content of its first child node (.firstChild)</p>
+                        <p><strong>Answers :</strong></p>
+                        <pre><code>var o = n.firstChild;
+console.log("Node Type : ", o.nodeType);
+console.log("Node Name : ", o.nodeName);
+console.log("Text Content : ", o.textContent);</code></pre>
+                        <p>b. the node type, node name and text content of its next sibling node (.nextSibling)</p>
+                        <p><strong>Answers :</strong></p>
+                        <pre><code>var p = n.nextSibling;
+console.log("Node Type : ", p.nodeType);
+console.log("Node Name : ", p.nodeName);
+console.log("Text Content : ", p.textContent);</code></pre>
+                        <p>c. the node type and node name of its parent node (.parent)</p>
+                        <p><strong>Answers :</strong></p>
+                        <pre><code>var q = n.parentNode;
+console.log("Node Type : ", q.nodeType);
+console.log("Node Name : ", q.nodeName);
+console.log("Text Content : ", q.textContent);</code></pre>
+                        <a href="#top">Go to top</a>
+                    </header>
+                </div>
+            </article>
+
+        </main>
+
+
+        <footer>
+            <!--Footer content -->
+            <p><a href="#top">Go to top</a></p>
+            <p><a href="K.Ching1@uni.brighton.ac.uk">Email Website design and developer: Kary Ching</a></p>
+            <small>&copy; 2025, Kary C.</small>
+        </footer>
+
+    </div><!--Close 'wrapper' div -->
+</body><!--Close 'body' -->
+</html><!--Close 'html' -->
